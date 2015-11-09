@@ -1,0 +1,13 @@
+{
+  "name": "eatweek",
+  "version": "1.0.0",
+  "description": "dinner planner",
+  "dependencies": {
+    "typescript": "^1.6.2"
+  },
+  "scripts": {
+    "build": "tsc -p ./app/js --outDir ./app/js/dist"
+  },
+  "repository": {},
+  "author": "James Formica"
+}

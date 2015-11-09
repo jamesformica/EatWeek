@@ -1,0 +1,1637 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"hea",
+				"header-height"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"key",
+				"keypressNamespace"
+			],
+			[
+				"def",
+				"deferredPromise"
+			],
+			[
+				"confir",
+				"confirmationDialog"
+			],
+			[
+				"GetF",
+				"function GetFirstSection	(siteID)"
+			],
+			[
+				"curre",
+				"currentNextID"
+			],
+			[
+				"cur",
+				"currentPrevID"
+			],
+			[
+				"prev",
+				"prev_section_id"
+			],
+			[
+				"previ",
+				"previousSection"
+			],
+			[
+				"newSe",
+				"newSectionID"
+			],
+			[
+				"next",
+				"next_section_id"
+			],
+			[
+				"pre",
+				"prev_section_id"
+			],
+			[
+				"SaveE",
+				"function SaveExistingSlide	(deferredPromise, showSuccess)"
+			],
+			[
+				"show",
+				"showSuccess"
+			],
+			[
+				"Sav",
+				"function SaveNonExistentSlide	(deferredPromise)"
+			],
+			[
+				"DeleE",
+				"function DeleteExistingSlide	(currentSection)"
+			],
+			[
+				"current",
+				"currentSection"
+			],
+			[
+				"Dele",
+				"function DeleteNonExistentSlide	(currentSection)"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"trans",
+				"transition"
+			],
+			[
+				"site",
+				"siteID"
+			],
+			[
+				"ap",
+				"autoplay"
+			],
+			[
+				"aut",
+				"autoplay"
+			],
+			[
+				"starts",
+				"startsWith"
+			],
+			[
+				"GetS",
+				"function GetShowcaseUrl	(siteID)"
+			],
+			[
+				"GetEd",
+				"function GetEditorUrl	(site)"
+			],
+			[
+				"inde",
+				"index"
+			],
+			[
+				"url",
+				"urlValues"
+			],
+			[
+				"Get",
+				"function GetSiteID	()"
+			],
+			[
+				"index",
+				"indexEndSiteID"
+			],
+			[
+				"ind",
+				"indexStartSiteID"
+			],
+			[
+				"inex",
+				"indexStartSiteID"
+			],
+			[
+				"lo",
+				"location"
+			],
+			[
+				"edit",
+				"editorUrlMatch"
+			],
+			[
+				"ed",
+				"editorUrlMatch"
+			],
+			[
+				"in",
+				"ignore"
+			],
+			[
+				"nex",
+				"nextArrow"
+			],
+			[
+				"new",
+				"newSection"
+			],
+			[
+				"Con",
+				"function ConvertLinks	($html, selector, linkSyntax)"
+			],
+			[
+				"link",
+				"linkSyntax"
+			],
+			[
+				"open",
+				"openBracketIndex"
+			],
+			[
+				"sear",
+				"searchIndex"
+			],
+			[
+				"Conv",
+				"function ConvertTelephoneLinks	($html)"
+			],
+			[
+				"BuildH",
+				"function BuildHousingInfo	(section, url, pageHeight)"
+			],
+			[
+				"prom",
+				"promise"
+			],
+			[
+				"Cons",
+				"function ConstructImageContent	($html, section, contentName, selector, pageHeight)"
+			],
+			[
+				"conte",
+				"contentName"
+			],
+			[
+				"COnt",
+				"function ConstructImageContent	($html, section, contentName, selector, pageHeight)"
+			],
+			[
+				"hei",
+				"height-yt-nav"
+			],
+			[
+				"h",
+				"horizontalNavs"
+			],
+			[
+				"he",
+				"height-yt-nav"
+			],
+			[
+				"sect",
+				"sections"
+			],
+			[
+				"ar",
+				"argument"
+			],
+			[
+				"GetSe",
+				"GetSectionURL"
+			],
+			[
+				"page",
+				"pageHeight"
+			],
+			[
+				"Conte",
+				"ContentProperty"
+			],
+			[
+				"tem",
+				"templateName"
+			],
+			[
+				"Section",
+				"function SectionContent	(key, type)"
+			],
+			[
+				"cont",
+				"content"
+			],
+			[
+				"Tem",
+				"TemplateStructure"
+			],
+			[
+				"se",
+				"sectionSkeleton"
+			],
+			[
+				"Reg",
+				"RegisteredTemplates"
+			],
+			[
+				"templ",
+				"template"
+			],
+			[
+				"Te",
+				"TemplateName"
+			],
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"Rer",
+				"RegisteredTemplates"
+			],
+			[
+				"Is",
+				"IsImageUrl"
+			],
+			[
+				"Edi",
+				"EditorHelperService"
+			],
+			[
+				"Image",
+				"ImageContentName"
+			],
+			[
+				"You",
+				"YouTubeContentName"
+			],
+			[
+				"Text",
+				"TextContentName"
+			],
+			[
+				"promsi",
+				"promises"
+			],
+			[
+				"pr",
+				"promise"
+			],
+			[
+				"con",
+				"content"
+			],
+			[
+				"F",
+				"function FindSectionContent	(contents, key)"
+			],
+			[
+				"sec",
+				"section_params"
+			],
+			[
+				"Previ",
+				"PreviousSectionEndAnimation"
+			],
+			[
+				"Prev",
+				"PreviousSectionStartAnimation"
+			],
+			[
+				"Next",
+				"NextSectionStartAnimation"
+			],
+			[
+				"bou",
+				"bounceInDown"
+			],
+			[
+				"_",
+				"_showcontrols"
+			],
+			[
+				"Build",
+				"BuildYoutubeURL"
+			],
+			[
+				"au",
+				"autoplay"
+			],
+			[
+				"vi",
+				"videoCode"
+			],
+			[
+				"auto",
+				"autoplay"
+			],
+			[
+				"_aut",
+				"_autoplay"
+			],
+			[
+				"_auto",
+				"_autohide"
+			],
+			[
+				"base",
+				"baseURL"
+			],
+			[
+				"_a",
+				"_autoplay"
+			],
+			[
+				"_au",
+				"_autohide"
+			],
+			[
+				"BuildT",
+				"BuildYoutubeContent"
+			],
+			[
+				"pop",
+				"popupSibling"
+			],
+			[
+				"ima",
+				"imageInput"
+			],
+			[
+				"_ba",
+				"_backgroundsize"
+			],
+			[
+				"backgroun",
+				"backgroundsize"
+			],
+			[
+				"backgr",
+				"backgroundsize"
+			],
+			[
+				"ca",
+				"cachedSnipets"
+			],
+			[
+				"Blank",
+				"BlankTemplateName"
+			],
+			[
+				"Bal",
+				"BlankTemplateName"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"im",
+				"imageEdit"
+			],
+			[
+				"contn",
+				"content_type"
+			],
+			[
+				"Imag",
+				"ImageTemplateName"
+			],
+			[
+				"close",
+				"closePopups"
+			],
+			[
+				"rgb",
+				"rgbArray"
+			],
+			[
+				"fa",
+				"fakeElement"
+			],
+			[
+				"Para",
+				"ParagraphTemplateName"
+			],
+			[
+				"te",
+				"template_name"
+			],
+			[
+				"P",
+				"ParagraphTemplateName"
+			],
+			[
+				"prop",
+				"propertyName"
+			],
+			[
+				"toBe",
+				"toBeTruthy"
+			],
+			[
+				"colour",
+				"colour-side-bar"
+			],
+			[
+				"row",
+				"rowHeight"
+			],
+			[
+				"col",
+				"colour-grid-lines"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"is",
+				"isDarkBackground"
+			],
+			[
+				"ne",
+				"newValue"
+			],
+			[
+				"CK",
+				"CKEDITOR"
+			],
+			[
+				"Add",
+				"function AddWrapperToContent	($content, content, colWidth, rowHeight)"
+			],
+			[
+				"tex",
+				"textContent"
+			],
+			[
+				"content",
+				"content_type"
+			],
+			[
+				"cler",
+				"function clearEditor	()"
+			],
+			[
+				"pl",
+				"plainSections"
+			],
+			[
+				"par",
+				"parse"
+			],
+			[
+				"S",
+				"ShowConfirm"
+			],
+			[
+				"warn",
+				"warningIcon"
+			],
+			[
+				"wa",
+				"warningIcon"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "views/index.slim",
+			"settings":
+			{
+				"buffer_size": 256,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/js/eatweek.ts",
+			"settings":
+			{
+				"buffer_size": 1680,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/css/_vars.sass",
+			"settings":
+			{
+				"buffer_size": 165,
+				"line_ending": "Unix",
+				"name": "_vars.sass"
+			}
+		},
+		{
+			"file": "app/css/global.sass",
+			"settings":
+			{
+				"buffer_size": 210,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/css/nav.sass",
+			"settings":
+			{
+				"buffer_size": 435,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/css/mmenu-overrides.sass",
+			"settings":
+			{
+				"buffer_size": 177,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "pack",
+		"selected_items":
+		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"type",
+				"Set Syntax: TypeScript"
+			],
+			[
+				"i",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"ine",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"slim",
+				"Set Syntax: Ruby Slim"
+			],
+			[
+				"INDE",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"IND",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"XML",
+				"Set Syntax: XML"
+			],
+			[
+				"ind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"in",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"idne",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"jaa",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"inxe",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"rails",
+				"Set Syntax: Ruby on Rails"
+			],
+			[
+				"mak",
+				"Set Syntax: Markdown"
+			],
+			[
+				"html r",
+				"Set Syntax: HTML (Rails)"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"inse",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"less",
+				"Set Syntax: LESS"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"jade",
+				"Set Syntax: Jade"
+			],
+			[
+				"ack",
+				"Package Control: Install Package"
+			],
+			[
+				"rubys",
+				"Set Syntax: Ruby Slim"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/jamesformica/code/eat week",
+		"/Users/jamesformica/code/eat week/app",
+		"/Users/jamesformica/code/eat week/app/fonts",
+		"/Users/jamesformica/code/eat week/app/js"
+	],
+	"file_history":
+	[
+		"/Users/jamesformica/code/eat week/package.json",
+		"/Users/jamesformica/code/eat week/app/js/tsconfig.json",
+		"/Users/jamesformica/code/eat week/eatweek.sublime-project",
+		"/Users/jamesformica/code/eat week/app/fonts/test.js",
+		"/Users/jamesformica/code/eat week/.sublime-project",
+		"/Users/jamesformica/code/eat week/app/js/example.ts",
+		"/Users/jamesformica/code/eat week/tsconfig.json",
+		"/Users/jamesformica/code/rmit-salessphere/package.json",
+		"/Users/jamesformica/code/eat week/eatweek.rb",
+		"/Users/jamesformica/code/eat week/app/css/page.sass",
+		"/Users/jamesformica/code/eat week/app/css/mmenu-overrides.sass",
+		"/Users/jamesformica/code/eat week/views/layout.slim",
+		"/Users/jamesformica/code/eat week/app/css/global.sass",
+		"/Users/jamesformica/code/eat week/app/js/nav.js",
+		"/Users/jamesformica/code/eat week/Gemfile",
+		"/Users/jamesformica/code/eat week/views/helpers/container.slim",
+		"/Users/jamesformica/code/eat week/helpers/container_helper.rb",
+		"/Users/jamesformica/code/eat week/views/index.erb",
+		"/Users/jamesformica/code/eat week/app/css/font.sass",
+		"/Users/jamesformica/code/trains/views/helpers/container.slim",
+		"/Users/jamesformica/code/eat week/app/css/nav.sass",
+		"/Users/jamesformica/code/eat week/index.html",
+		"/Users/jamesformica/code/eat week/config.ru",
+		"/Users/jamesformica/code/rmit-salessphere/views/layout.slim",
+		"/Users/jamesformica/code/rmit-salessphere/web.rb",
+		"/Users/jamesformica/.cups/lpoptions",
+		"/Users/jamesformica/Downloads/pricefinder-connect-3.2.2-php/PDSPropertySearch.php",
+		"/Users/jamesformica/Downloads/pricefinder-connect-3.2.2-php/PDSCommon.php",
+		"/Users/jamesformica/Downloads/pricefinder-connect-3.2.2-dotnet/Default.aspx.cs",
+		"/Users/jamesformica/Downloads/pricefinder-connect-3.2.2-php/PriceFinderConnectExampleSource.php",
+		"/Users/jamesformica/Downloads/pricefinder-connect-3.2.2-php/index.php",
+		"/Users/jamesformica/Downloads/pricefinder-connect-3.2.2-dotnet/App_Code/SearchTest.cs",
+		"/Users/jamesformica/Desktop/pitch perfect",
+		"/Users/jamesformica/Downloads/jquery-ui-1.11.4/index.html",
+		"/Users/jamesformica/code/rmit-salessphere/app/js/services/slides_renderer_service.js",
+		"/Users/jamesformica/Downloads/font-awesome-4.4.0/css/font-awesome.min.css",
+		"/Users/jamesformica/code/trains/views/layout.slim",
+		"/Users/jamesformica/code/trains/Gemfile",
+		"/Users/jamesformica/code/trains/views/index.slim",
+		"/Users/jamesformica/code/trains/trains.rb",
+		"/Users/jamesformica/code/trains/app/ts/test.ts",
+		"/Users/jamesformica/code/trains/app/js/text.ts",
+		"/Users/jamesformica/code/trains/app/js/text.js",
+		"/Users/jamesformica/code/trains/app/js/text.js.ts",
+		"/Users/jamesformica/code/trains/config.ru",
+		"/Users/jamesformica/code/rmit-salessphere/app/css/globals.sass",
+		"/Users/jamesformica/code/rmit-salessphere/app/css/login.sass",
+		"/Users/jamesformica/code/rmit-salessphere/app/css/_base.sass",
+		"/Users/jamesformica/code/rmit-salessphere/spec/controllers/routes_spec.rb",
+		"/Users/jamesformica/code/rmit-salessphere/spec/spec_helper.rb",
+		"/Users/jamesformica/code/rmit-salessphere/spec/serializers/section_serializer_spec.rb",
+		"/Users/jamesformica/code/rmit-salessphere/spec/controllers/view_controller_spec.rb",
+		"/Users/jamesformica/code/rmit-salessphere/app/js/controllers/editor_controller.js",
+		"/Users/jamesformica/code/rmit-salessphere/helpers/SectionHelper.rb",
+		"/Users/jamesformica/code/rmit-salessphere/helpers/SiteCreationHelper.rb",
+		"/Users/jamesformica/code/rmit-salessphere/app/js/controllers/slides_controller.js",
+		"/Users/jamesformica/code/rmit-salessphere/app/js/services/section_service.js",
+		"/Users/jamesformica/code/rmit-salessphere/views/profile.slim",
+		"/Users/jamesformica/code/rmit-salessphere/views/login.slim",
+		"/Users/jamesformica/code/rmit-salessphere/views/create.slim",
+		"/Users/jamesformica/code/rmit-salessphere/views/register.slim",
+		"/Users/jamesformica/code/rmit-salessphere/controllers/section_controller.rb",
+		"/Users/jamesformica/code/rmit-salessphere/config.ru",
+		"/Users/jamesformica/code/rmit-salessphere/controllers/user_controller.rb",
+		"/Users/jamesformica/code/rmit-salessphere/controllers/view_controller.rb",
+		"/Users/jamesformica/code/rmit-salessphere/models/user.rb",
+		"/Users/jamesformica/code/rmit-salessphere/app/js/services/common_service.js",
+		"/Users/jamesformica/code/rmit-salessphere/views/editor.slim",
+		"/Users/jamesformica/code/rmit-salessphere/app/js/services/confirm_service.js",
+		"/Users/jamesformica/code/rmit-salessphere/app/css/editor.sass",
+		"/Users/jamesformica/code/rmit-salessphere/app/js/directives/control_directive.js",
+		"/Users/jamesformica/code/rmit-salessphere/app/test/editor_helper_service_spec.js",
+		"/Users/jamesformica/code/rmit-salessphere/app/js/services/editor_helper_service.js",
+		"/Users/jamesformica/code/rmit-salessphere/app/js/services/toast_service.js",
+		"/Users/jamesformica/code/rmit-salessphere/app/js/services/editor_renderer_service.js",
+		"/Users/jamesformica/code/rmit-salessphere/app/css/register.sass",
+		"/Users/jamesformica/code/off-the-record/app/assets/stylesheets/layout.css.sass",
+		"/Users/jamesformica/code/rmit-salessphere/app/js/directives/common_directive.js",
+		"/Users/jamesformica/code/rmit-salessphere/app/js/templates/imageTemplate.js",
+		"/Users/jamesformica/code/rmit-salessphere/app/js/app.js",
+		"/Users/jamesformica/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/jamesformica/code/rmit-salessphere/views/slides.slim",
+		"/Users/jamesformica/code/rmit-salessphere/app/css/slides.sass",
+		"/Users/jamesformica/code/rmit-salessphere/app/css/_globals.sass",
+		"/Users/jamesformica/code/rmit-salessphere/app/css/section_youtube.sass",
+		"/Users/jamesformica/code/rmit-salessphere/app/css/style.sass",
+		"/Users/jamesformica/code/rmit-salessphere/views/manager.slim",
+		"/Users/jamesformica/code/rmit-salessphere/app/js/directives/slides_renderer_directive.js",
+		"/Users/jamesformica/code/rmit-salessphere/views/partials/manager.slim",
+		"/Users/jamesformica/code/rmit-salessphere/app/js/services/index_renderer_service.js",
+		"/Users/jamesformica/code/rmit-salessphere/views/sections/headerandtext.slim",
+		"/Users/jamesformica/code/rmit-salessphere/views/sections/youtube.slim",
+		"/Users/jamesformica/code/rmit-salessphere/views/sections/paragraph.slim",
+		"/Users/jamesformica/code/rmit-salessphere/views/sections/image.slim",
+		"/Users/jamesformica/code/rmit-salessphere/views/sections/housinginfo.slim",
+		"/Users/jamesformica/code/rmit-salessphere/app/css/vendor/main.sass",
+		"/Users/jamesformica/code/rmit-salessphere/app/js/directives/index_renderer_directive.js",
+		"/Users/jamesformica/code/rmit-salessphere/app/js/templates/housingInfoTemplate.js",
+		"/Users/jamesformica/code/rmit-salessphere/app/js/templateBuilder.js",
+		"/Users/jamesformica/code/rmit-salessphere/views/partials/editor.slim",
+		"/Users/jamesformica/code/rmit-salessphere/app/css/vendor/semantic.min.css",
+		"/Users/jamesformica/code/rmit-salessphere/app/css/content_editor.sass",
+		"/Users/jamesformica/code/rmit-salessphere/views/partials/index.slim",
+		"/Users/jamesformica/code/rmit-salessphere/app/css/progress_bar.sass",
+		"/Users/jamesformica/code/rmit-salessphere/app/js/directives/editor_directive.js",
+		"/Users/jamesformica/code/rmit-salessphere/views/main/image.slim",
+		"/Users/jamesformica/code/rmit-salessphere/views/main/blank.slim",
+		"/Users/jamesformica/code/rmit-salessphere/views/main/youtube.slim",
+		"/Users/jamesformica/code/rmit-salessphere/views/main/paragraph.slim",
+		"/Users/jamesformica/code/rmit-salessphere/app/js/templates/youtubeTemplate.js",
+		"/Users/jamesformica/code/rmit-salessphere/views/main/headerandtext.slim",
+		"/Users/jamesformica/code/rmit-salessphere/db/schema.rb",
+		"/Users/jamesformica/code/rmit-salessphere/db/seeds.rb",
+		"/Users/jamesformica/code/rmit-salessphere/spec/models/section_spec.rb",
+		"/Users/jamesformica/code/rmit-salessphere/spec/controllers/api_controller_spec.rb",
+		"/Users/jamesformica/code/rmit-salessphere/app/js/services/template_service.js",
+		"/Users/jamesformica/code/rmit-salessphere/app/js/templates/paragraphTemplate.js",
+		"/Users/jamesformica/code/rmit-salessphere/app/js/templates/headerAndTextTemplate.js",
+		"/Users/jamesformica/code/rmit-salessphere/app/js/templates/blankTemplate.js",
+		"/Users/jamesformica/code/R.A.L.P.H/RALPH/public/javascripts/core/ralph.js",
+		"/Users/jamesformica/code/rmit-salessphere/app/js/templates/TemplateBase.js",
+		"/Users/jamesformica/code/rmit-salessphere/app/js/services/snipet_service.js",
+		"/Users/jamesformica/code/rmit-salessphere/wercker.yml",
+		"/Users/jamesformica/code/rmit-salessphere/views/editor/youtube_editor.slim",
+		"/Users/jamesformica/code/rmit-salessphere/serializers/section_contents_serializer.rb",
+		"/Users/jamesformica/code/rmit-salessphere/db/migrate/20150525084601_add_key_to_section_contents.rb",
+		"/Users/jamesformica/code/rmit-salessphere/models/section_content.rb",
+		"/Users/jamesformica/code/rmit-salessphere/serializers/section_serializer.rb"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"<open folders>",
+			"/Users/jamesformica/code/rmit-salessphere/*.slim",
+			"/Users/jamesformica/code/rmit-salessphere",
+			"",
+			"editor.slom",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"45deg",
+			";",
+			"findpropertiesbypos",
+			"postcode",
+			"createPropertySearchCriteria",
+			"link",
+			"|",
+			"headerandte",
+			"getSubSections",
+			"@user",
+			"BuildSite",
+			"PreviousSectionEndAnimation",
+			"NextSectionEndAnimation",
+			"fade",
+			"editorUrl",
+			"showcaseUrl",
+			"GetSection",
+			"padded-content",
+			"namelast",
+			"namefirst",
+			"1px",
+			"0",
+			"3",
+			"0",
+			"black",
+			"GetPagePer",
+			"section",
+			"phone",
+			"phoneSyntax",
+			"mobile",
+			"long",
+			"loader-wrapper",
+			"ss-editor-progress",
+			"$(element)",
+			"TemplateService",
+			"this",
+			"header",
+			"Header",
+			"header",
+			"Header",
+			"header",
+			":",
+			",",
+			",\n",
+			",",
+			":",
+			"name",
+			"content",
+			"Content",
+			"content",
+			"this.ParagraphTemplateName",
+			"Template",
+			"ToastService",
+			"promises",
+			"delete",
+			"Boolean(",
+			"new_section_contents",
+			"save",
+			"CreateSection",
+			"GetSection",
+			"done",
+			"Next",
+			"$element",
+			"Paragraph",
+			"hex",
+			"justif",
+			"ClearEditor",
+			"\"",
+			"element",
+			"col",
+			"$(element)",
+			"var",
+			"confirmDialog",
+			"dfd",
+			"show",
+			"ui button",
+			"circular",
+			"icon",
+			"circular",
+			"action-bar",
+			"competition",
+			"clearGridLines",
+			".png",
+			"0 1px 2px 0 rgba(0,0,0,0.26)",
+			"numRows",
+			"numColumns",
+			"spaceWidth",
+			"setElementHeight",
+			"arrow",
+			"count",
+			"plus",
+			"<",
+			"last_response.body",
+			"SectionContent",
+			"section_content",
+			"NV['RACK_ENV']",
+			"sub_section_section_id",
+			"section_type",
+			"}}\n",
+			"\"",
+			"0px",
+			"2px",
+			"black",
+			"-",
+			"var",
+			"keywordRecorder",
+			"recognizerHelper",
+			"keywordRecorder",
+			"recorder",
+			"keywordRecorder",
+			"var ",
+			"var",
+			"eight",
+			"two",
+			"one",
+			"ex",
+			"zero",
+			"coma",
+			"space",
+			"String.fromCharCode",
+			"this",
+			"clb",
+			"h4",
+			"recorder.",
+			"final",
+			"+=",
+			"$log",
+			"Time"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"padded-content",
+			"",
+			"this",
+			"/"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "views/index.slim",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 256,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"WordCountSyntax": "ruby slim",
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/js/eatweek.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1680,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								927,
+								927
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"WordCountSyntax": "typescript",
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/css/_vars.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 165,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								133,
+								119
+							]
+						],
+						"settings":
+						{
+							"WordCountSyntax": "plain text",
+							"auto_name": "_vars.sass",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/css/global.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 210,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								74,
+								74
+							]
+						],
+						"settings":
+						{
+							"WordCountSyntax": "sass",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/css/nav.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 435,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								290,
+								290
+							]
+						],
+						"settings":
+						{
+							"WordCountSyntax": "sass",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/css/mmenu-overrides.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 177,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								68,
+								68
+							]
+						],
+						"settings":
+						{
+							"WordCountSyntax": "sass",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "eatweek.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"editor.sl",
+				"views/editor.slim"
+			],
+			[
+				"editorcont",
+				"rmit-salessphere/app/js/controllers/editor_controller.js"
+			],
+			[
+				"editorcon",
+				"rmit-salessphere/app/js/controllers/editor_controller.js"
+			],
+			[
+				"editorcontro",
+				"rmit-salessphere/app/js/controllers/editor_controller.js"
+			],
+			[
+				"editr",
+				"rmit-salessphere/views/editor.slim"
+			],
+			[
+				"editorren",
+				"rmit-salessphere/app/js/services/editor_renderer_service.js"
+			],
+			[
+				"regi",
+				"rmit-salessphere/views/register.slim"
+			],
+			[
+				"sectioncon",
+				"rmit-salessphere/controllers/section_controller.rb"
+			],
+			[
+				"viewcon",
+				"rmit-salessphere/controllers/view_controller.rb"
+			],
+			[
+				"slidei",
+				"rmit-salessphere/app/js/services/slides_renderer_service.js"
+			],
+			[
+				"editrcont",
+				"rmit-salessphere/app/js/controllers/editor_controller.js"
+			],
+			[
+				"viewco",
+				"rmit-salessphere/controllers/view_controller.rb"
+			],
+			[
+				"indexrend",
+				"rmit-salessphere/app/js/services/index_renderer_service.js"
+			],
+			[
+				"indexren",
+				"rmit-salessphere/app/js/services/index_renderer_service.js"
+			],
+			[
+				"layout",
+				"rmit-salessphere/views/layout.slim"
+			],
+			[
+				"editorrender",
+				"rmit-salessphere/app/js/services/editor_renderer_service.js"
+			],
+			[
+				"editor",
+				"rmit-salessphere/app/js/services/editor_renderer_service.js"
+			],
+			[
+				"indexre",
+				"rmit-salessphere/app/js/services/index_renderer_service.js"
+			],
+			[
+				"indexred",
+				"rmit-salessphere/app/js/services/index_renderer_service.js"
+			],
+			[
+				"editorrend",
+				"rmit-salessphere/app/js/services/editor_renderer_service.js"
+			],
+			[
+				"youtube",
+				"rmit-salessphere/views/sections/youtube.slim"
+			],
+			[
+				"editordir",
+				"rmit-salessphere/app/js/directives/editor_directive.js"
+			],
+			[
+				"edit",
+				"rmit-salessphere/views/partials/editor.slim"
+			],
+			[
+				"editroren",
+				"rmit-salessphere/app/js/services/editor_renderer_service.js"
+			],
+			[
+				".slim",
+				"rmit-salessphere/views/layout.slim"
+			],
+			[
+				"ed",
+				"rmit-salessphere/app/js/services/editor_renderer_service.js"
+			],
+			[
+				"editorre",
+				"rmit-salessphere/app/js/services/editor_renderer_service.js"
+			],
+			[
+				"editorred",
+				"rmit-salessphere/app/js/services/editor_renderer_service.js"
+			],
+			[
+				"indexrender",
+				"rmit-salessphere/app/js/services/index_renderer_service.js"
+			],
+			[
+				"editordire",
+				"rmit-salessphere/app/js/directives/editor_directive.js"
+			],
+			[
+				"viewc",
+				"rmit-salessphere/controllers/view_controller.rb"
+			],
+			[
+				"webb",
+				"rmit-salessphere/web.rb"
+			],
+			[
+				"template",
+				"rmit-salessphere/app/js/services/template_service.js"
+			],
+			[
+				"editorher",
+				"rmit-salessphere/app/js/services/editor_helper_service.js"
+			],
+			[
+				"snip",
+				"rmit-salessphere/app/js/services/snipet_service.js"
+			],
+			[
+				"editordei",
+				"rmit-salessphere/app/js/directives/editor_directive.js"
+			],
+			[
+				"templ",
+				"rmit-salessphere/app/js/services/template_service.js"
+			],
+			[
+				"sectionserv",
+				"rmit-salessphere/app/js/services/section_service.js"
+			],
+			[
+				"templa",
+				"rmit-salessphere/app/js/services/template_service.js"
+			],
+			[
+				"seeds",
+				"rmit-salessphere/db/seeds.rb"
+			],
+			[
+				"eidtorre",
+				"rmit-salessphere/app/js/services/editor_renderer_service.js"
+			],
+			[
+				"editrcot",
+				"rmit-salessphere/app/js/controllers/editor_controller.js"
+			],
+			[
+				"contr",
+				"rmit-salessphere/app/js/directives/control_directive.js"
+			],
+			[
+				"control",
+				"rmit-salessphere/app/js/directives/control_directive.js"
+			],
+			[
+				"editor_dr",
+				"rmit-salessphere/app/js/directives/editor_directive.js"
+			],
+			[
+				"editor_re",
+				"rmit-salessphere/app/js/services/editor_renderer_service.js"
+			],
+			[
+				"editor.sass",
+				"rmit-salessphere/app/css/editor.sass"
+			],
+			[
+				"eidtor_con",
+				"rmit-salessphere/app/js/controllers/editor_controller.js"
+			],
+			[
+				"app.js",
+				"rmit-salessphere/app/js/app.js"
+			],
+			[
+				"editor.sa",
+				"rmit-salessphere/app/css/editor.sass"
+			],
+			[
+				"eeds",
+				"rmit-salessphere/db/seeds.rb"
+			],
+			[
+				"appl",
+				"rmit-salessphere/views/application.slim"
+			],
+			[
+				"routes",
+				"off-the-record/config/routes.rb"
+			],
+			[
+				"index",
+				"rmit-salessphere/views/index.slim"
+			],
+			[
+				"in",
+				"rmit-salessphere/views/index.slim"
+			],
+			[
+				"editor.sli",
+				"rmit-salessphere/views/editor.slim"
+			],
+			[
+				"section",
+				"rmit-salessphere/app/js/directives/section_directive.js"
+			],
+			[
+				"index_",
+				"rmit-salessphere/app/js/controllers/index_controller.js"
+			],
+			[
+				"layo",
+				"rmit-salessphere/views/layout.slim"
+			],
+			[
+				"layou",
+				"rmit-salessphere/views/layout.slim"
+			],
+			[
+				"action",
+				"off-the-record/app/assets/stylesheets/action-bar-controls.css.sass"
+			],
+			[
+				"profile",
+				"off-the-record/app/assets/templates/profile/rows/profile_control.html.slim"
+			],
+			[
+				"pra",
+				"Web Applcation/BFNG/views/practise-fire.jade"
+			],
+			[
+				"nav.",
+				"Web Applcation/BFNG/public/stylesheets/nav.less"
+			],
+			[
+				"comm",
+				"Web Applcation/BFNG/public/stylesheets/common.less"
+			],
+			[
+				"query",
+				"Web Applcation/BFNG/public/javascripts/angular/services/query_string_service.js"
+			],
+			[
+				"main",
+				"Web Applcation/BFNG/public/javascripts/angular/controllers/main_controller.js"
+			],
+			[
+				"new",
+				"off-the-record/app/views/users/new.html.slim"
+			],
+			[
+				"qs",
+				"off-the-record/app/serializers/question_serializer.rb"
+			],
+			[
+				"questions",
+				"off-the-record/app/controllers/api/v1/questions_controller.rb"
+			],
+			[
+				"question_show",
+				"off-the-record/app/assets/templates/profile/rows/question_show_user_status.html"
+			],
+			[
+				"show",
+				"off-the-record/app/assets/templates/profile/pages/questions_show_view.html.slim"
+			],
+			[
+				"rout",
+				"config/routes.rb"
+			],
+			[
+				"route",
+				"config/routes.rb"
+			],
+			[
+				"vaira",
+				"app/assets/stylesheets/variables.css.sass"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 755.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 259.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

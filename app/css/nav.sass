@@ -1,0 +1,25 @@
+@import app/css/_vars
+
+header.page-header
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	background: white
+	border-bottom: $solid-border
+	height: $header-height
+	padding: 0 $standard-padding * 2
+	z-index: 9999
+
+	.hamburger
+		float: left
+		font-size: $header-height / 2
+		line-height: $header-height
+		color: black
+		cursor: pointer
+		transition: 0.4s
+
+		&.active
+			-ms-transform: rotate($hamburger-rotate)
+			-webkit-transform: rotate($hamburger-rotate)
+			transform: rotate($hamburger-rotate)

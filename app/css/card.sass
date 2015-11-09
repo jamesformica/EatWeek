@@ -1,0 +1,34 @@
+@import app/css/_vars
+
+$card-margin: $standard-padding
+
+.card
+	box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24)
+
+	&.float
+		float: left
+		margin: $standard-padding
+
+	> .image
+		position: relative
+		display: block
+		height: 150px
+		background-size: cover
+		background-position: center
+
+	> .content
+		padding: $standard-padding
+		+font-normal()
+		background-color: white
+		word-break: break-all
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+		display: block
+			
+
+// Card Layouts
+.four-cards
+	
+	> .card
+		width: calc(100% / 4 - (#{$card-margin} * 2)) // 2 = number of margins either side of card

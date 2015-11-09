@@ -1,0 +1,41 @@
+== container('eatweek.InitialiseEatWeek') do
+	
+	article class="page-wrapper"
+
+		header class="page-header"
+			i class="fa fa-bars hamburger ui-hamburger"
+
+
+		section class="page"	
+
+			section class="this-week ui-this-week"
+
+				== slim :"this-week", layout: false
+
+			section class="today ui-today"
+
+				div class="image"
+
+				div class="content"
+					span class="heading"
+						| Chicken Salad
+
+					<p class="receipe">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a dapibus sapien. Nullam pellentesque finibus mauris in consectetur. Donec ultrices erat in rhoncus commodo. Vestibulum vel vehicula dolor. Phasellus sed placerat ante. Suspendisse potenti. Ut fringilla porta quam, quis aliquet elit mollis in. Proin dignissim lorem magna. Donec vitae diam arcu. Mauris lobortis scelerisque urna, id interdum quam lacinia sit amet. Donec non nunc id nunc semper lacinia.
+
+						Integer justo purus, porta et diam sed, posuere tincidunt justo. Nulla condimentum semper maximus. Nulla facilisi. Nunc eu urna orci. Donec eget commodo velit. Mauris ullamcorper cursus ante ut finibus. Maecenas hendrerit hendrerit malesuada. Sed ac arcu eget ex euismod cursus sit amet eu ante. Mauris sed felis id elit scelerisque accumsan et vel ex. Nam eget tincidunt lorem. Donec auctor viverra posuere. Suspendisse placerat ac odio sit amet venenatis. Morbi vitae placerat mi.
+
+						Donec id accumsan tortor. Quisque accumsan urna eget porta scelerisque. Nulla facilisi. Fusce fringilla a ante nec sodales. Mauris scelerisque pulvinar urna at bibendum. Vestibulum at viverra lorem, id blandit leo. Nunc elementum, ipsum blandit tincidunt fringilla, risus ex pellentesque mi, in tincidunt nunc lectus ut arcu.
+
+						Sed et odio nisi. Mauris ultricies ante ut nulla laoreet, vel ullamcorper leo euismod. Fusce leo tellus, aliquet vel tempor tempus, consectetur eu orci. Nunc laoreet erat vel finibus convallis. Integer sit amet tortor orci. Curabitur id venenatis dolor. Donec molestie risus eget augue iaculis porta. Nullam urna lacus, pellentesque vel lorem a, tincidunt interdum diam. Donec non ante vel leo viverra sodales in et velit. Ut gravida tellus sem, nec vehicula quam sollicitudin sit amet. Suspendisse in turpis in lorem dictum tempor ut sed ante.
+
+						Vivamus cursus libero nisl, at varius velit lobortis imperdiet. Nam vel lectus ac nibh ultrices eleifend. Nunc iaculis ac ex et semper. Proin mattis volutpat mauris pharetra lobortis. Sed mattis urna augue. Phasellus lorem dui, commodo porttitor libero at, tincidunt interdum neque. Pellentesque neque libero, tempus quis congue at, tempor nec ex. Proin eget porttitor arcu, vitae dapibus massa.
+
+					</p>
+
+nav id="mmenu"
+	ul
+		li
+			a Home
+		li
+			a About Us

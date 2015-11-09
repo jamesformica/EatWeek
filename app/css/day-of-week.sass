@@ -1,0 +1,27 @@
+@import app/css/_vars
+
+$day-of-week-height: 40px
+
+.day-of-week
+	display: block
+	height: $day-of-week-height
+	margin: $standard-padding 0
+
+	span
+		display: inline-block
+		height: $day-of-week-height
+		width: $day-of-week-height
+		line-height: $day-of-week-height
+		font-size: $day-of-week-height / 2
+		border-radius: 50%
+		margin-left: $standard-padding / 2
+		text-align: center
+		cursor: pointer
+
+		&:first-child
+			margin-left: 0
+
+		&.active
+			color: white
+			background-color: $primary-colour
+			box-shadow: $small-shadow

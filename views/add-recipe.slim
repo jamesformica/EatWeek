@@ -1,0 +1,27 @@
+== container('eatweek.recipe.InitiliseAddRecipe') do
+
+	div class="hidden ui-clone-card card float" data-recipeid="{recipeid}"
+		div class="image" style="background-image: url('{imageUrl}')" target="_blank"
+		
+		div class="content"
+			strong
+				| {desciption}
+
+			p
+				| {publisher}
+
+
+	div class="centered padded-v"
+		form class="ui-form"
+
+			input class="large ui-search-criteria" type="text" value="Search for recipes"
+			button type="submit" class="ui-search large"
+				i class="fa fa-search"
+
+			div class="day-of-week ui-day-of-week"
+
+				- Date::DAYNAMES.each_with_index do |day, index|
+					span class=('active' if @today.wday == index)
+						| #{day[0]}
+
+	div class="ui-recipes four-cards"
