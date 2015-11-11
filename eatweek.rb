@@ -52,14 +52,27 @@ class App < Sinatra::Base
 	end
 	
 	get '/' do
+		@today = Date.today
 
-		dayname_hash = {}
-		Date::DAYNAMES.each_with_index do |day_name, index|
-			dayname_hash[index] = day_name
+		week_start_day = @today - @today.wday
+		week_end_day = @today + (6 - @today.wday)
+
+		recipes = Recipe.where(assigned_date: week_start_day.beginning_of_day..week_end_day.end_of_day)
+
+		@grouped_recipes = {}
+		recipes.each do |recipe|
+
+			recipe_day_index = recipe.assigned_date.wday
+
+			if @grouped_recipes[recipe_day_index] == nil
+				@grouped_recipes[recipe_day_index] = []
+			end
+
+			@grouped_recipes[recipe_day_index].push(recipe)
+
 		end
 
-		@today = Date.today
-		@days_left = dayname_hash.select { |index, day| index >= @today.wday }
+		puts @grouped_recipes
 
 		slim :index
 	end

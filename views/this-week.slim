@@ -5,6 +5,14 @@ div class="centered padded-v"
 		| Add Recipe
 
 
-- days_left.each do |index, day_name|
-	span class="day-heading"
-		| #{day_name}
+- Date::DAYNAMES.each_with_index do |day_name, index|
+	- if grouped_recipes[index] != nil
+		span class="day-heading"
+			| #{day_name}
+		- grouped_recipes[index].each do |recipe|
+			div class="card single"
+				div class="image" style="background-image: url('#{recipe.img_url}')"
+				
+				div class="content"
+					strong
+						| #{recipe.description}
