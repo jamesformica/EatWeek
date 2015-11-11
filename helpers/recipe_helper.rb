@@ -12,15 +12,11 @@ class RecipeHelper
 		# group the recipes by their assigned dates
 		grouped_recipes = {}
 		recipes.each do |recipe|
+			day_index = recipe.assigned_date.wday
 
-			recipe_day_index = recipe.assigned_date.wday
+			grouped_recipes[day_index] ||= []
 
-			if grouped_recipes[recipe_day_index] == nil
-				grouped_recipes[recipe_day_index] = []
-			end
-
-			grouped_recipes[recipe_day_index].push(recipe)
-
+			grouped_recipes[day_index].push(recipe)
 		end
 
 		return grouped_recipes
