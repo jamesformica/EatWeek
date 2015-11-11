@@ -5,6 +5,7 @@ require 'sinatra/json'
 require 'sass'
 require 'slim'
 require 'unirest'
+require "sinatra/activerecord"
 
 require_relative 'helpers/container_helper'
 require_relative 'helpers/date'
@@ -13,12 +14,18 @@ require_relative 'helpers/date'
 # It contains some asset configuration and then the routes
 class App < Sinatra::Base
 
+	# load and require all model classes
+	(Dir['./models/*.rb'].sort).each do |file|
+		require file
+	end
+
 	set :sessions => true
 	
 	set :root, File.dirname(__FILE__)
 	set :public_folder, File.dirname(__FILE__) + '/app/'
 	
 	register Sinatra::AssetPack
+	register Sinatra::ActiveRecordExtension
 
 	App.helpers ContainerHelper
 	
@@ -64,7 +71,7 @@ class App < Sinatra::Base
 
 	post '/addrecipe' do
 
-		day_index = params["day_index"]
+		day_index = params["day_index"].to_i
 		recipe_id = params["recipe_id"]
 		description = params["description"]
 		image_url = params["image_url"]
@@ -75,7 +82,13 @@ class App < Sinatra::Base
 
 		date = today + index_diff
 
-		status 200
+		newRecipe = Recipe.new(recipe_id: recipe_id, description: description, img_url: image_url, assigned_date: date)
+
+		if newRecipe.save
+			status 200
+		else
+			status 500
+		end
 	end
 
 
