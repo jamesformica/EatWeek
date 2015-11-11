@@ -53,10 +53,7 @@ class App < Sinatra::Base
 	
 	get '/' do
 		@today = Date.today
-
 		@grouped_recipes = RecipeHelper.get_weekly_recipes(@today)
-
-		puts @grouped_recipes
 
 		slim :index
 	end
@@ -67,21 +64,7 @@ class App < Sinatra::Base
 	end
 
 	post '/addrecipe' do
-
-		day_index = params["day_index"].to_i
-		recipe_id = params["recipe_id"]
-		description = params["description"]
-		image_url = params["image_url"]
-
-		today = Date.today
-		today_index = today.wday
-		index_diff = day_index - today_index
-
-		date = today + index_diff
-
-		newRecipe = Recipe.new(recipe_id: recipe_id, description: description, img_url: image_url, assigned_date: date)
-
-		if newRecipe.save
+		if RecipeHelper.add_recipe_from_params(params)
 			status 200
 		else
 			status 500

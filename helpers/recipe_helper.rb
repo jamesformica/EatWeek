@@ -22,4 +22,23 @@ class RecipeHelper
 		return grouped_recipes
 	end
 
+	def self.add_recipe_from_params(params)
+		# get all the info from params
+		day_index = params["day_index"].to_i
+		recipe_id = params["recipe_id"]
+		description = params["description"]
+		image_url = params["image_url"]
+
+		# calculate the actual date from the selected date's index
+		today = Date.today
+		today_index = today.wday
+		index_diff = day_index - today_index
+		date = today + index_diff
+
+		new_recipe = Recipe.new(recipe_id: recipe_id, description: description, img_url: image_url, assigned_date: date)
+
+		return new_recipe.save
+
+	end
+
 end
