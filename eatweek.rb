@@ -45,12 +45,37 @@ class App < Sinatra::Base
 	end
 	
 	get '/' do
+
+		dayname_hash = {}
+		Date::DAYNAMES.each_with_index do |day_name, index|
+			dayname_hash[index] = day_name
+		end
+
+		@today = Date.today
+		@days_left = dayname_hash.select { |index, day| index >= @today.wday }
+
 		slim :index
 	end
 
 	get '/addrecipe' do
 		@today = Date.today
 		slim :"add-recipe", layout: false
+	end
+
+	post '/addrecipe' do
+
+		day_index = params["day_index"]
+		recipe_id = params["recipe_id"]
+		description = params["description"]
+		image_url = params["image_url"]
+
+		today = Date.today
+		today_index = today.wday
+		index_diff = day_index - today_index
+
+		date = today + index_diff
+
+		status 200
 	end
 
 

@@ -5,21 +5,6 @@ div class="centered padded-v"
 		| Add Recipe
 
 
-span class="day-heading"
-	| Monday
-
-
-span class="day-heading"
-	| Tuesday
-
-
-span class="day-heading"
-	| Wednesday
-
-
-span class="day-heading"
-	| Thursday
-
-
-span class="day-heading"
-	| Friday
+- days_left.each do |index, day_name|
+	span class="day-heading"
+		| #{day_name}

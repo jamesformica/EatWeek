@@ -10,7 +10,7 @@
 
 			section class="this-week ui-this-week"
 
-				== slim :"this-week", layout: false
+				== slim :"this-week", layout: false, :locals => { :days_left => @days_left }
 
 			section class="today ui-today"
 
