@@ -8,7 +8,7 @@ require 'unirest'
 require "sinatra/activerecord"
 
 require_relative 'helpers/container_helper'
-require_relative 'helpers/date'
+require_relative 'helpers/recipe_helper'
 
 # The main class that will run the web application
 # It contains some asset configuration and then the routes
@@ -54,23 +54,7 @@ class App < Sinatra::Base
 	get '/' do
 		@today = Date.today
 
-		week_start_day = @today - @today.wday
-		week_end_day = @today + (6 - @today.wday)
-
-		recipes = Recipe.where(assigned_date: week_start_day.beginning_of_day..week_end_day.end_of_day)
-
-		@grouped_recipes = {}
-		recipes.each do |recipe|
-
-			recipe_day_index = recipe.assigned_date.wday
-
-			if @grouped_recipes[recipe_day_index] == nil
-				@grouped_recipes[recipe_day_index] = []
-			end
-
-			@grouped_recipes[recipe_day_index].push(recipe)
-
-		end
+		@grouped_recipes = RecipeHelper.get_weekly_recipes(@today)
 
 		puts @grouped_recipes
 
