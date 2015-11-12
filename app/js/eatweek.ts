@@ -24,7 +24,6 @@ module eatweek {
 			eatweek.popup.ShowInPopup({
 				Url: "/addrecipe",
 				Title: "Add Recipe",
-				ShowHeader: true,
 				Size: popup.PopupSize.Large,
 				Data: {}
 			});
@@ -36,15 +35,14 @@ module eatweek {
 	}
 
 	function ViewRecipe($element: JQuery): void {
-		var recipeID: string = $element.data("recipeid").toString();
+		var id: string = $element.data("id").toString();
 
 		eatweek.popup.ShowInPopup({
 			Url: "/recipe",
 			Title: "",
-			ShowHeader: false,
 			Size: popup.PopupSize.Medium,
 			Data: {
-				recipe_id: recipeID
+				id: id
 			}
 		});
 	}

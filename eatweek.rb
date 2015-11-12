@@ -89,6 +89,7 @@ class App < Sinatra::Base
 	end
 
 	get '/recipe' do
+		@recipe = Recipe.find(params["id"].to_i)
 		slim :view_recipe, layout: false
 	end
 

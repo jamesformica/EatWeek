@@ -10,7 +10,7 @@ div class="centered padded-v"
 		span class="day-heading"
 			| #{day_name}
 		- grouped_recipes[index].each do |recipe|
-			div class="card single ui-thisweek-card" data-recipeid="#{recipe.recipe_id}"
+			div class="card single ui-thisweek-card" data-id="#{recipe.id}"
 				div class="image" style="background-image: url('#{recipe.img_url}')"
 				
 				div class="content"

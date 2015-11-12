@@ -20,6 +20,10 @@ $loader-size: 50px
 	background: $page-background
 	z-index: $popup-zindex
 
+	&.medium
+		width: 60%
+		left: 20%
+
 	> .loader
 		position: absolute
 		font-size: $loader-size
@@ -55,7 +59,3 @@ $loader-size: 50px
 		margin-top: $popup-header-height
 		height: calc(100% - #{$popup-header-height})
 		overflow: auto
-
-	&.headless
-		> .content
-			margin-top: 0

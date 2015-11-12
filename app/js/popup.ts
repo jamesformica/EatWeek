@@ -6,7 +6,6 @@ module eatweek.popup {
 	export interface IPopupSettings {
 		Url: string;
 		Title: string;
-		ShowHeader: boolean;
 		Data: {};
 		Size: PopupSize
 	}
@@ -17,7 +16,7 @@ module eatweek.popup {
 	}
 
 	export function ShowInPopup(settings: IPopupSettings): void {
-		var $popup = BuildPopup(settings.Title, settings.ShowHeader, settings.Size);
+		var $popup = BuildPopup(settings.Title, settings.Size);
 
 		AttachPopupEvents($popup);
 
@@ -33,7 +32,7 @@ module eatweek.popup {
 		});
 	}
 
-	function BuildPopup(title: string, showHeader: boolean, size: PopupSize): JQuery {
+	function BuildPopup(title: string, size: PopupSize): JQuery {
 
 		var $popupBackdrop = $("<div>")
 		.addClass("popup-backdrop ui-popup-backdrop");
@@ -41,29 +40,27 @@ module eatweek.popup {
 		var $popup = $("<div>")
 		.addClass("popup ui-popup");
 
+		if (size === PopupSize.Medium) {
+			$popup.addClass("medium");
+		}
+
 		var $loading = $("<i>")
 		.addClass("fa fa-spinner fa-spin loader ui-loader hidden");
 
-		$popup.append($loading);
+		var $header = $("<header>")
+		.text(title);
 
-		if (showHeader) {
-			var $header = $("<header>")
-			.text(title);
+		var $close = $("<i>")
+		.addClass("fa fa-times ui-close");
 
-			var $close = $("<i>")
-			.addClass("fa fa-times ui-close");
-
-			$header.append($close);
-			$popup.append($header);
-		} else {
-			$popup.addClass("headless");
-		}
+		$header.append($close);
 
 		var $content = $("<section>")
 		.addClass("content ui-content");
 
+		$popup.append($loading);
+		$popup.append($header);
 		$popup.append($content);
-
 		$popupBackdrop.append($popup);
 
 		return $popupBackdrop;
