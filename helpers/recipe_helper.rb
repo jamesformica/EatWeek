@@ -31,8 +31,7 @@ class RecipeHelper
 
 		# calculate the actual date from the selected date's index
 		today = Date.today
-		today_index = today.wday
-		index_diff = day_index - today_index
+		index_diff = day_index - today.wday
 		date = today + index_diff
 
 		new_recipe = Recipe.new(recipe_id: recipe_id, description: description, img_url: image_url, assigned_date: date)
