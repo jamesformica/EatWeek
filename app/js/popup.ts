@@ -3,15 +3,28 @@
 module eatweek.popup {
 	"use strict";
 
-	export function ShowInPopup(url: string, title: string, showHeader: boolean = true, data: {} = {}): void {
-		var $popup = BuildPopup(title, showHeader);
+	export interface IPopupSettings {
+		Url: string;
+		Title: string;
+		ShowHeader: boolean;
+		Data: {};
+		Size: PopupSize
+	}
+
+	export enum PopupSize {
+		Medium,
+		Large
+	}
+
+	export function ShowInPopup(settings: IPopupSettings): void {
+		var $popup = BuildPopup(settings.Title, settings.ShowHeader, settings.Size);
 
 		AttachPopupEvents($popup);
 
 		$.ajax({
 			method: "GET",
-			url: url,
-			data: data
+			url: settings.Url,
+			data: settings.Data
 		})
 		.done(function(html) {
 			$popup.find('.ui-content').html(html);
@@ -20,7 +33,7 @@ module eatweek.popup {
 		});
 	}
 
-	function BuildPopup(title: string, showHeader: boolean = true): JQuery {
+	function BuildPopup(title: string, showHeader: boolean, size: PopupSize): JQuery {
 
 		var $popupBackdrop = $("<div>")
 		.addClass("popup-backdrop ui-popup-backdrop");

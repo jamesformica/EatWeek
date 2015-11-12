@@ -21,7 +21,13 @@ module eatweek {
 		eatweek.utils.HeightToBottom($today);
 
 		$addRecipe.click(() => {
-			eatweek.popup.ShowInPopup("/addrecipe", "Add Recipe");
+			eatweek.popup.ShowInPopup({
+				Url: "/addrecipe",
+				Title: "Add Recipe",
+				ShowHeader: true,
+				Size: popup.PopupSize.Large,
+				Data: {}
+			});
 		});
 
 		eatweek.$thisWeek.on("click", '.ui-thisweek-card', (e) => {
@@ -32,11 +38,15 @@ module eatweek {
 	function ViewRecipe($element: JQuery): void {
 		var recipeID: string = $element.data("recipeid").toString();
 
-		var data = {
-			recipe_id: recipeID
-		};
-
-		eatweek.popup.ShowInPopup("/recipe", "", false, data);
+		eatweek.popup.ShowInPopup({
+			Url: "/recipe",
+			Title: "",
+			ShowHeader: false,
+			Size: popup.PopupSize.Medium,
+			Data: {
+				recipe_id: recipeID
+			}
+		});
 	}
 
 	export function ReloadThisWeek(): void {
