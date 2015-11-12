@@ -30,4 +30,11 @@ module eatweek.RecipeService {
 			data: callData
 		});
 	}
+
+	export function GetThisWeek(): JQueryPromise<string> {
+		return $.ajax({
+			method: "GET",
+			url: "/thisweek"
+		});
+	}
 }

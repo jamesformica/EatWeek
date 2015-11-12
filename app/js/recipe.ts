@@ -12,19 +12,14 @@ module eatweek.recipe {
 
 		$form: JQuery;
 		$searchInput: JQuery;
-		$searchBtn: JQuery;
 		$recipeContainer: JQuery;
 		$cloneCard: JQuery;
 		$dayOfWeekContainer: JQuery;
 
 		constructor(private $container: JQuery) {
-
 			this.$form = this.$container.find('.ui-form');
-
 			this.$searchInput = this.$form.find('.ui-search-criteria');
-			this.$searchBtn = this.$form.find('.ui-search');
 			this.$dayOfWeekContainer = this.$form.find('.ui-day-of-week');
-
 			this.$cloneCard = this.$container.find('.ui-clone-card');
 			this.$recipeContainer = this.$container.find('.ui-recipes');
 
@@ -47,10 +42,6 @@ module eatweek.recipe {
 
 			this.$searchInput.click(() => {
 				this.$searchInput.select();
-			});
-
-			this.$searchBtn.click(() => {
-				this.SearchForRecipe();
 			});
 
 			// searching for recipes
@@ -80,7 +71,7 @@ module eatweek.recipe {
 			.fail(() => {
 				eatweek.popup.HideLoader(this.$container);
 
-				this.$recipeContainer.html("Oh no. Something went wrong trying to find recipes.");
+				this.$recipeContainer.append(eatweek.utils.BuildNotification(utils.NotificationType.Warning, "Oopsies", "Something went wrong trying to find recipes."));
 			});
 		}
 
@@ -112,6 +103,7 @@ module eatweek.recipe {
 			eatweek.RecipeService.AddRecipe(dayIndex, recipeID, description, imageUrl)
 			.done(() => {
 				eatweek.popup.ClosePopup(this.$container);
+				eatweek.ReloadThisWeek();
 			})
 			.fail(() => {
 				alert("nooooo");

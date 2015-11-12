@@ -1,0 +1,38 @@
+@import app/css/_vars
+
+.notification
+	width: 90%
+	max-width: 600px
+	background: white
+	margin: $standard-padding auto
+	box-shadow: $small-shadow
+	border-radius: $standard-radius
+	text-align: center
+
+	.header
+		+font-medium()
+		+font-bold()
+		color: white
+		display: inline-block
+		width: 100%
+		padding: $standard-padding / 2
+		box-sizing: border-box
+		border-top-left-radius: $standard-radius
+		border-top-right-radius: $standard-radius
+
+	.message
+		+font-normal()
+		margin: 0
+		padding: $standard-padding
+
+	&.error
+		.header
+			background-color: #FF003C
+
+	&.warning
+		.header
+			background-color: #FF8A00
+
+	&.success
+		.header
+			background-color: #00C176

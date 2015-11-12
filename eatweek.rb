@@ -58,6 +58,11 @@ class App < Sinatra::Base
 		slim :index
 	end
 
+	get '/thisweek' do
+		grouped_recipes = RecipeHelper.get_weekly_recipes(Date.today)
+		slim :"this-week", layout: false, :locals => { :grouped_recipes => grouped_recipes }
+	end
+
 	get '/addrecipe' do
 		@today = Date.today
 		slim :"add-recipe", layout: false
