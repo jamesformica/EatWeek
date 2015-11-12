@@ -9,6 +9,13 @@ module eatweek.utils {
 		Error
 	}
 
+	export function HeightToBottom($element: JQuery): void {
+		var pos = $element.offset();
+		var windowH = $(window).height();
+		$element.css("height", windowH - pos.top);
+		$element.css("overflow-y", "auto");
+	}
+
 	export function ReplaceAll(text: string, find: string, replace: any): string {
 		return text.split(find).join(replace);
 	}

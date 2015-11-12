@@ -17,19 +17,26 @@ module eatweek {
 
 		var mmenu = new eatweek.mmenu.Mmenu($hamburger);
 
-		yToBottom($thisWeek);
-		yToBottom($today);
+		eatweek.utils.HeightToBottom($thisWeek);
+		eatweek.utils.HeightToBottom($today);
 
 		$addRecipe.click(() => {
-			eatweek.popup.ShowInPopup("", "Add Recipe");
+			eatweek.popup.ShowInPopup("/addrecipe", "Add Recipe");
+		});
+
+		eatweek.$thisWeek.on("click", '.ui-thisweek-card', (e) => {
+			ViewRecipe($(e.currentTarget));
 		});
 	}
 
-	function yToBottom($element: JQuery): void {
-		var pos = $element.offset();
-		var windowH = $(window).height();
-		$element.css("height", windowH - pos.top);
-		$element.css("overflow-y", "auto");
+	function ViewRecipe($element: JQuery): void {
+		var recipeID: string = $element.data("recipeid").toString();
+
+		var data = {
+			recipe_id: recipeID
+		};
+
+		eatweek.popup.ShowInPopup("/recipe", "", false, data);
 	}
 
 	export function ReloadThisWeek(): void {

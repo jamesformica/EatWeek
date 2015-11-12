@@ -60,12 +60,12 @@ class App < Sinatra::Base
 
 	get '/thisweek' do
 		grouped_recipes = RecipeHelper.get_weekly_recipes(Date.today)
-		slim :"this-week", layout: false, :locals => { :grouped_recipes => grouped_recipes }
+		slim :this_week, layout: false, :locals => { :grouped_recipes => grouped_recipes }
 	end
 
 	get '/addrecipe' do
 		@today = Date.today
-		slim :"add-recipe", layout: false
+		slim :add_recipe, layout: false
 	end
 
 	post '/addrecipe' do
@@ -75,7 +75,6 @@ class App < Sinatra::Base
 			status 500
 		end
 	end
-
 
 	get '/searchrecipe' do
 
@@ -87,7 +86,10 @@ class App < Sinatra::Base
 		}
 
 		json response.body
+	end
 
+	get '/recipe' do
+		slim :view_recipe, layout: false
 	end
 
 end

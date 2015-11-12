@@ -3,26 +3,24 @@
 module eatweek.popup {
 	"use strict";
 
-	export function ShowInPopup(url: string, title: string): void {
+	export function ShowInPopup(url: string, title: string, showHeader: boolean = true, data: {} = {}): void {
+		var $popup = BuildPopup(title, showHeader);
 
-		var $popup = BuildPopup(title);
-
-		AttachPopupEvents($popup);		
-
+		AttachPopupEvents($popup);
 
 		$.ajax({
 			method: "GET",
-			url: "/addrecipe"
+			url: url,
+			data: data
 		})
 		.done(function(html) {
 			$popup.find('.ui-content').html(html);
 
 			$('body').prepend($popup);
 		});
-
 	}
 
-	function BuildPopup(title: string): JQuery {
+	function BuildPopup(title: string, showHeader: boolean = true): JQuery {
 
 		var $popupBackdrop = $("<div>")
 		.addClass("popup-backdrop ui-popup-backdrop");
@@ -33,19 +31,24 @@ module eatweek.popup {
 		var $loading = $("<i>")
 		.addClass("fa fa-spinner fa-spin loader ui-loader hidden");
 
-		var $header = $("<header>")
-		.text(title);
+		$popup.append($loading);
 
-		var $close = $("<i>")
-		.addClass("fa fa-times ui-close");
+		if (showHeader) {
+			var $header = $("<header>")
+			.text(title);
 
-		$header.append($close);
+			var $close = $("<i>")
+			.addClass("fa fa-times ui-close");
+
+			$header.append($close);
+			$popup.append($header);
+		} else {
+			$popup.addClass("headless");
+		}
 
 		var $content = $("<section>")
 		.addClass("content ui-content");
 
-		$popup.append($loading);
-		$popup.append($header);
 		$popup.append($content);
 
 		$popupBackdrop.append($popup);
