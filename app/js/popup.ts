@@ -7,7 +7,8 @@ module eatweek.popup {
 		Url: string;
 		Title: string;
 		Data: {};
-		Size: PopupSize
+		Size: PopupSize;
+		ShowHeading: boolean;
 	}
 
 	export enum PopupSize {
@@ -16,7 +17,7 @@ module eatweek.popup {
 	}
 
 	export function ShowInPopup(settings: IPopupSettings): void {
-		var $popup = BuildPopup(settings.Title, settings.Size);
+		var $popup = BuildPopup(settings.Title, settings.Size, settings.ShowHeading);
 
 		AttachPopupEvents($popup);
 
@@ -32,7 +33,7 @@ module eatweek.popup {
 		});
 	}
 
-	function BuildPopup(title: string, size: PopupSize): JQuery {
+	function BuildPopup(title: string, size: PopupSize, showHeading: boolean = true): JQuery {
 
 		var $popupBackdrop = $("<div>")
 		.addClass("popup-backdrop ui-popup-backdrop");
@@ -49,6 +50,10 @@ module eatweek.popup {
 
 		var $header = $("<header>")
 		.text(title);
+
+		if (!showHeading) {
+			$header.addClass("invisible");
+		}
 
 		var $close = $("<i>")
 		.addClass("fa fa-times ui-close");

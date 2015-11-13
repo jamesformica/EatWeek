@@ -7,3 +7,5 @@ npm-debug.log
 app/js/dist
 
 db/*.sqlite3
+
+app/recipe_images

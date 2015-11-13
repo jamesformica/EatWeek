@@ -47,6 +47,13 @@ $loader-size: 50px
 		border-top-right-radius: $standard-radius
 		z-index: $popup-zindex
 
+		&.invisible
+			background-color: transparent
+			border-bottom: none
+
+			> i
+				text-shadow: $small-shadow
+
 		> i
 			position: absolute
 			right: 10px

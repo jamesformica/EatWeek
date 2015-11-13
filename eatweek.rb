@@ -5,7 +5,8 @@ require 'sinatra/json'
 require 'sass'
 require 'slim'
 require 'unirest'
-require "sinatra/activerecord"
+require 'open-uri'
+require 'sinatra/activerecord'
 
 require_relative 'helpers/container_helper'
 require_relative 'helpers/recipe_helper'

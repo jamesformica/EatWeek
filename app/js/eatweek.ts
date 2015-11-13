@@ -25,7 +25,8 @@ module eatweek {
 				Url: "/addrecipe",
 				Title: "Add Recipe",
 				Size: popup.PopupSize.Large,
-				Data: {}
+				Data: {},
+				ShowHeading: true
 			});
 		});
 
@@ -43,7 +44,8 @@ module eatweek {
 			Size: popup.PopupSize.Medium,
 			Data: {
 				id: id
-			}
+			},
+			ShowHeading: false
 		});
 	}
 

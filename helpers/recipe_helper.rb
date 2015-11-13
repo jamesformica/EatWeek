@@ -1,3 +1,5 @@
+require 'securerandom'
+
 class RecipeHelper
 
 	def self.get_weekly_recipes(date_in_week)
@@ -29,12 +31,21 @@ class RecipeHelper
 		description = params["description"]
 		image_url = params["image_url"]
 
+		# generate a guid for the image and save it to the public folder
+		image_guid = SecureRandom.uuid
+		public_path = File.join("recipe_images", "#{image_guid}.png")
+		path = File.join("app", public_path)
+
+		open(path, 'wb') do |image|
+			image << open(image_url).read
+		end
+
 		# calculate the actual date from the selected date's index
 		today = Date.today
 		index_diff = day_index - today.wday
 		date = today + index_diff
 
-		new_recipe = Recipe.new(recipe_id: recipe_id, description: description, img_url: image_url, assigned_date: date)
+		new_recipe = Recipe.new(recipe_id: recipe_id, description: description, image_path: public_path, assigned_date: date)
 
 		return new_recipe.save
 
