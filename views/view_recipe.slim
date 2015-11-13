@@ -1,5 +1,11 @@
 div class="cover-image" style="background-image: url('#{@recipe.image_path}')"
 
-div class="cover-content"
-	p class="title"
-		| #{@recipe.description}
+== container('eatweek.recipe.InitiliseViewRecipe') do
+	
+	input class="ui-hidden-recipeid" type="hidden" value="#{@recipe.recipe_id}"
+	div class="cover-content"
+		p class="title"
+			| #{@recipe.description}
+
+		div
+			ul class="ui-ingredients"

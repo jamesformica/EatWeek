@@ -16,7 +16,7 @@
 .cover-content
 	position: relative
 	width: 90%
-	margin-top: $cover-image-height - $popup-header-height - 25
+	margin-top: ($cover-image-height / 2) - $popup-header-height
 	margin-bottom: $standard-padding
 	margin-left: 5%
 	padding: $standard-padding
@@ -24,6 +24,7 @@
 	background-color: white
 	box-shadow: $small-shadow
 	box-sizing: border-box
+	border-radius: $standard-radius
 
 	.title
 		+font-large()

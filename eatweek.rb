@@ -78,12 +78,21 @@ class App < Sinatra::Base
 	end
 
 	get '/searchrecipe' do
-
 		response = Unirest.get "http://food2fork.com/api/search",
-		parameters:{
+		parameters: {
 			"key" => "7e110811cf0df3c6c089462aede9beca",
 			"q" => params['text'],
 			"sort" => "r"
+		}
+
+		json response.body
+	end
+
+	get '/getrecipe' do
+		response = Unirest.get "http://food2fork.com/api/get",
+		parameters: {
+			"key" => "7e110811cf0df3c6c089462aede9beca",
+			"rId" => params["recipe_id"]
 		}
 
 		json response.body
