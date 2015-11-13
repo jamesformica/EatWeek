@@ -25,7 +25,7 @@ module eatweek.recipe {
 	function DisplayRecipe(recipe, $ingredients: JQuery): void {
 
 		for (var i = 0; i < recipe.ingredients.length; i++) {
-			var $ingredient = $("<li>").text(recipe.ingredients[i]);
+			var $ingredient = $("<li>").html(recipe.ingredients[i]);
 			$ingredients.append($ingredient);
 		}
 	}
