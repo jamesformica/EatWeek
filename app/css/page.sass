@@ -4,35 +4,14 @@ section.page
 	padding-top: $header-height
 	
 	section.this-week
-		float: left
-		width: 25%
+		margin: 0 auto
+		width: 70%
 		box-sizing: border-box
 
 		.day-heading
 			+font-fancy()
+			font-size: 5em
 			margin-left: $standard-padding
 			display: block
 			text-align: left
-
-	section.today
-		float: left
-		width: 50%
-		box-sizing: border-box
-		background-color: white
-
-		.image
-			background-size: cover
-			background-position: center
-			background-image: url('http://farm9.staticflickr.com/8111/8590518328_789c54da3a_c.jpg')
-			height: 300px
-
-		.content
-			padding: $standard-padding
-
-			.heading
-				font-size: 2.6em
-				display: block
-				text-align: left
-
-			.receipe
-				font-size: 1.4em
+			text-shadow: $small-shadow
