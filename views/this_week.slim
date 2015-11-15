@@ -1,18 +1,27 @@
 
-div class="centered padded-v"
-	button class="primary medium ui-add-recipe"
-		i class="fa fa-plus"
-		| Add Recipe
+
+- week_dates.each do |week_date|
+	div class="week-column"
+		header class=('active' if Date.today.wday == week_date.wday)
+			span class="dayname"
+				| #{week_date.dayname}
+			span class="date"
+				| #{week_date.to_s}
+
+/ div class="centered padded-v"
+/ 	button class="primary medium ui-add-recipe"
+/ 		i class="fa fa-plus"
+/ 		| Add Recipe
 
 
-- Date::DAYNAMES.each_with_index do |day_name, index|
-	- if grouped_recipes[index] != nil
-		span class="day-heading"
-			| #{day_name}
-		- grouped_recipes[index].each do |recipe|
-			div class="card single ui-thisweek-card" data-id="#{recipe.id}"
-				div class="image" style="background-image: url('#{recipe.image_path}')"
+/ - Date::DAYNAMES.each_with_index do |day_name, index|
+/ 	- if grouped_recipes[index] != nil
+/ 		span class="day-heading"
+/ 			| #{day_name}
+/ 		- grouped_recipes[index].each do |recipe|
+/ 			div class="card single horizontal ui-thisweek-card" data-id="#{recipe.id}"
+/ 				div class="image" style="background-image: url('#{recipe.image_path}')"
 				
-				div class="content"
-					strong
-						| #{recipe.description}
+/ 				div class="content"
+/ 					strong
+/ 						| #{recipe.description}

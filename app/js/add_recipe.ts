@@ -89,6 +89,7 @@ module eatweek.recipe {
 				newCloneCard = eatweek.utils.ReplaceAll(newCloneCard, "{description}", recipe.title);
 				newCloneCard = eatweek.utils.ReplaceAll(newCloneCard, "{publisher}", recipe.publisher);
 				newCloneCard = eatweek.utils.ReplaceAll(newCloneCard, "{recipe_id}", recipe.recipe_id);
+				newCloneCard = eatweek.utils.ReplaceAll(newCloneCard, "{rank}", Math.round(recipe.social_rank));
 
 				this.$recipeContainer.append($.parseHTML(newCloneCard));
 			}
@@ -99,8 +100,9 @@ module eatweek.recipe {
 			var description = $recipe.data("description").toString();
 			var imageUrl = $recipe.data("imageurl").toString();
 			var dayIndex = Number(this.$dayOfWeekContainer.find(".active").first().data("dayindex"));
+			var rank = Number($recipe.data("rank"));
 
-			eatweek.RecipeService.AddRecipe(dayIndex, recipeID, description, imageUrl)
+			eatweek.RecipeService.AddRecipe(dayIndex, recipeID, description, imageUrl, rank)
 			.done(() => {
 				eatweek.popup.ClosePopup(this.$container);
 				eatweek.ReloadThisWeek();

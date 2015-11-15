@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151113110559) do
+ActiveRecord::Schema.define(version: 20151114203330) do
 
   create_table "recipes", force: :cascade do |t|
     t.string   "recipe_id"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20151113110559) do
     t.datetime "assigned_date"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "rank"
   end
 
 end

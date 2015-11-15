@@ -30,6 +30,7 @@ class RecipeHelper
 		recipe_id = params["recipe_id"]
 		description = params["description"]
 		image_url = params["image_url"]
+		rank = params["rank"].to_i
 
 		# generate a guid for the image and save it to the public folder
 		image_guid = SecureRandom.uuid
@@ -45,7 +46,7 @@ class RecipeHelper
 		index_diff = day_index - today.wday
 		date = today + index_diff
 
-		new_recipe = Recipe.new(recipe_id: recipe_id, description: description, image_path: public_path, assigned_date: date)
+		new_recipe = Recipe.new(recipe_id: recipe_id, description: description, image_path: public_path, assigned_date: date, rank: rank)
 
 		return new_recipe.save
 

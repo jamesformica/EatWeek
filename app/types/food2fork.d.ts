@@ -8,4 +8,5 @@ interface Recipe {
 	image_url: string;
 	publisher: string;
 	recipe_id: string;
+	social_rank: number;
 }

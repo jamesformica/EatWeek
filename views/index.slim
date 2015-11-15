@@ -10,7 +10,7 @@
 
 			section class="this-week ui-this-week"
 
-				== slim :"this_week", layout: false, :locals => { :grouped_recipes => @grouped_recipes }
+				== slim :"this_week", layout: false, :locals => { :grouped_recipes => @grouped_recipes, :week_dates => @week_dates }
 
 nav id="mmenu"
 	ul

@@ -1,5 +1,6 @@
 @import app/css/_vars
 
+$card-image-height: 200px
 $card-margin: $standard-padding
 
 .card
@@ -17,7 +18,7 @@ $card-margin: $standard-padding
 	> .image
 		position: relative
 		display: block
-		height: 150px
+		height: $card-image-height
 		background-size: cover
 		background-position: center
 
@@ -30,6 +31,20 @@ $card-margin: $standard-padding
 		overflow: hidden
 		text-overflow: ellipsis
 		display: block
+
+	&.horizontal
+		height: $card-image-height
+
+		> .image
+			float: left
+			width: $card-image-height
+			display: inline-block
+
+		> .content
+			float: left
+			width: calc(100% - #{$card-image-height})
+			height: $card-image-height
+			box-sizing: border-box
 			
 
 // Card Layouts

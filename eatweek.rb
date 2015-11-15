@@ -9,6 +9,7 @@ require 'open-uri'
 require 'sinatra/activerecord'
 
 require_relative 'helpers/container_helper'
+require_relative 'helpers/date_helper'
 require_relative 'helpers/recipe_helper'
 
 # The main class that will run the web application
@@ -55,6 +56,8 @@ class App < Sinatra::Base
 	get '/' do
 		@today = Date.today
 		@grouped_recipes = RecipeHelper.get_weekly_recipes(@today)
+
+		@week_dates = DateHelper.get_week_dates(@today)
 
 		slim :index
 	end

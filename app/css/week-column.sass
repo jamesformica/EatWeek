@@ -1,0 +1,37 @@
+@import app/css/_vars
+
+$column-border: 1px solid $primary-colour
+
+.week-column
+	width: 250px
+	border-right: $column-border
+	display: inline-block
+	height: 100%
+
+	&:last-child
+		border-right: none
+
+	header
+		text-align: center
+		padding: $standard-padding
+		background-color: white
+		border-bottom: $column-border
+
+		&.active
+			background-color: $primary-colour
+
+			.dayname
+				color: white
+
+			.date
+				color: white
+
+		.dayname
+			display: block
+			color: $primary-colour
+			padding-bottom: $standard-padding / 2
+			+font-large()
+
+		.date
+			display: block
+			font-size: 1.1em

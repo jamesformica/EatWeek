@@ -6,6 +6,7 @@ module eatweek.RecipeService {
 		recipe_id: string;
 		description: string;
 		image_url: string;
+		rank: number;
 	}
 
 	export function SearchForRecipe(value: string): JQueryPromise<RecipeSearchResult> {
@@ -16,12 +17,13 @@ module eatweek.RecipeService {
 		});
 	}
 
-	export function AddRecipe(dayIndex: number, recipeID: string, description: string, imageUrl: string): JQueryPromise<any> {
+	export function AddRecipe(dayIndex: number, recipeID: string, description: string, imageUrl: string, rank: number): JQueryPromise<any> {
 		var callData: IAddRecipe = {
 			day_index: dayIndex,
 			recipe_id: recipeID,
 			description: description,
-			image_url: imageUrl
+			image_url: imageUrl,
+			rank: rank
 		};
 
 		return $.ajax({
