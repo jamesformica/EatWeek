@@ -1,7 +1,6 @@
 
-
 - model.get_week_dates.each do |week_date|
-	div class="week-column"
+	div class="week-column ui-week-column"
 		header class=('active' if Date.today.wday == week_date.wday)
 			span class="dayname"
 				| #{week_date.dayname}
@@ -15,5 +14,5 @@
 						div class="image" style="background-image: url('#{recipe.image_path}')"
 				
 		 				div class="content"
-		 					strong
+		 					span
 		 						| #{recipe.description}

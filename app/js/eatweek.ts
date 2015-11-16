@@ -8,13 +8,10 @@ module eatweek {
 	export function InitialiseEatWeek($container: JQuery): void {
 
 		var $hamburger = $container.find('.ui-hamburger');
-
-		eatweek.$thisWeek = $container.find('.ui-this-week');
-
 		var $addRecipe = $container.find('.ui-add-recipe');
-
 		var mmenu = new eatweek.mmenu.Mmenu($hamburger);
 
+		eatweek.$thisWeek = $container.find('.ui-this-week');
 		eatweek.utils.HeightToBottom($thisWeek);
 
 		$addRecipe.click(() => {
@@ -30,9 +27,11 @@ module eatweek {
 		eatweek.$thisWeek.on("click", '.ui-thisweek-card', (e) => {
 			ViewRecipe($(e.currentTarget));
 		});
+
+		eatweek.utils.HeightToBottom(eatweek.$thisWeek.find('.ui-week-column'));
 	}
 
-	function ViewRecipe($element: JQuery): void {
+	export function ViewRecipe($element: JQuery): void {
 		var id: string = $element.data("id").toString();
 
 		eatweek.popup.ShowInPopup({

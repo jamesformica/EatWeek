@@ -76,10 +76,28 @@ module eatweek.popup {
 		$popup.find('.ui-close').click((e: JQueryEventObject) => {
 			ClosePopup($(e.currentTarget));
 		});
+
+		// clicking the backdrop of the popup
+		$popup.click((e) => {
+			ClosePopup($(e.currentTarget));
+		}).children().click((e) => {
+			e.stopPropagation();
+		});
 	}
 
 	export function ClosePopup($element: JQuery): void {
-		$element.closest('.ui-popup-backdrop').remove();
+
+		var $popup: JQuery;
+
+		if ($element.hasClass('ui-popup-backdrop')) {
+			$popup = $element;
+		} else {
+			$popup = $element.closest('.ui-popup-backdrop');
+		}
+
+		$popup.fadeOut(200, () => {
+			$popup.remove();
+		});
 	}
 
 	export function ShowLoader($element: JQuery): void {
