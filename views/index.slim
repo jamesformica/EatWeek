@@ -5,12 +5,16 @@
 		header class="page-header"
 			i class="fa fa-bars hamburger ui-hamburger"
 
+			button class="primary medium ui-add-recipe"
+				i class="fa fa-plus"
+					| Add Recipe
+
 
 		section class="page"	
 
 			section class="this-week ui-this-week"
 
-				== slim :"this_week", layout: false, :locals => { :grouped_recipes => @grouped_recipes, :week_dates => @week_dates }
+				== slim :"this_week", layout: false, :locals => { model: AddRecipe.new }
 
 nav id="mmenu"
 	ul

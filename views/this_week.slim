@@ -1,6 +1,6 @@
 
 
-- week_dates.each do |week_date|
+- model.get_week_dates.each do |week_date|
 	div class="week-column"
 		header class=('active' if Date.today.wday == week_date.wday)
 			span class="dayname"
@@ -8,10 +8,15 @@
 			span class="date"
 				| #{week_date.to_s}
 
-/ div class="centered padded-v"
-/ 	button class="primary medium ui-add-recipe"
-/ 		i class="fa fa-plus"
-/ 		| Add Recipe
+		section
+			- if !model.grouped_recipes[week_date.wday].nil?
+				- model.grouped_recipes[week_date.wday].each do |recipe|
+					div class="card single ui-thisweek-card" data-id="#{recipe.id}"
+						div class="image" style="background-image: url('#{recipe.image_path}')"
+				
+		 				div class="content"
+		 					strong
+		 						| #{recipe.description}
 
 
 / - Date::DAYNAMES.each_with_index do |day_name, index|

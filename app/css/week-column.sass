@@ -11,27 +11,34 @@ $column-border: 1px solid $primary-colour
 	&:last-child
 		border-right: none
 
-	header
+	> header
 		text-align: center
 		padding: $standard-padding
 		background-color: white
 		border-bottom: $column-border
 
-		.dayname
+		> .dayname
 			display: block
 			color: $primary-colour
 			padding-bottom: $standard-padding / 2
 			+font-large()
 
-		.date
+		> .date
 			display: block
 			font-size: 1.1em
 
 		&.active
 			background-color: $primary-colour
 
-			.dayname
+			> .dayname
 				color: white
 
-			.date
+			> .date
 				color: white
+
+	> section
+		float: left
+		width: 100%
+
+		> .card
+			margin: $standard-padding
