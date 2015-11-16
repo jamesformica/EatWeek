@@ -17,16 +17,3 @@
 		 				div class="content"
 		 					strong
 		 						| #{recipe.description}
-
-
-/ - Date::DAYNAMES.each_with_index do |day_name, index|
-/ 	- if grouped_recipes[index] != nil
-/ 		span class="day-heading"
-/ 			| #{day_name}
-/ 		- grouped_recipes[index].each do |recipe|
-/ 			div class="card single horizontal ui-thisweek-card" data-id="#{recipe.id}"
-/ 				div class="image" style="background-image: url('#{recipe.image_path}')"
-				
-/ 				div class="content"
-/ 					strong
-/ 						| #{recipe.description}
