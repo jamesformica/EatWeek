@@ -10,7 +10,7 @@
 		section
 			- if !model.grouped_recipes[week_date.wday].nil?
 				- model.grouped_recipes[week_date.wday].each do |recipe|
-					div class="card single ui-thisweek-card" data-id="#{recipe.id}"
+					div class="card fill ui-thisweek-card" data-id="#{recipe.id}"
 						div class="image" style="background-image: url('#{recipe.image_path}')"
 				
 		 				div class="content"

@@ -1,5 +1,7 @@
 @import app/css/_vars
 
+$controls-width: 100px
+
 header.page-header
 	position: fixed
 	top: 0
@@ -28,4 +30,26 @@ header.page-header
 		display: inline-block
 		float: right
 		height: $header-height
-		padding-top: 7px
+		line-height: $header-height
+
+
+	.controls
+		position: absolute
+		width: $controls-width
+		text-align: center
+		left: calc(50% - #{$controls-width / 2})
+		
+
+		> i
+			float: left
+			+font-large()
+			height: $header-height
+			line-height: $header-height
+			cursor: pointer
+
+		> span
+			float: left
+			+font-normal()
+			display: inline-block
+			line-height: $header-height
+			margin: 0 $standard-padding * 2
