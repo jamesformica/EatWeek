@@ -71,7 +71,7 @@ module eatweek {
 			date: date
 		};
 
-		eatweek.service.SendRequest<string>(eatweek.service.Method.GET, "/datecontrols", data).done((html) => {
+		eatweek.service.SendRequest<string>(eatweek.service.Method.GET, "/datecontrols", data, false).done((html) => {
 			$header.find('.ui-date-controls').replaceWith($.parseHTML(html));
 		});
 	}
