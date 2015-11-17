@@ -1,7 +1,7 @@
 
 - model.get_week_dates.each do |week_date|
 	div class="week-column ui-week-column"
-		header class=('active' if Date.today.wday == week_date.wday)
+		header class=('active' if Date.today == week_date)
 			span class="dayname"
 				| #{week_date.dayname}
 			span class="date"
