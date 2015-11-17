@@ -10,11 +10,10 @@ module eatweek.RecipeService {
 	}
 
 	export function SearchForRecipe(value: string): JQueryPromise<RecipeSearchResult> {
-		return $.ajax({
-			method: "GET",
-			url: "/searchrecipe",
-			data: { text: value }
-		});
+		var data = {
+			text: value
+		};
+		return eatweek.service.SendRequest<RecipeSearchResult>(eatweek.service.Method.GET, "/searchrecipe", data);
 	}
 
 	export function AddRecipe(dayIndex: number, recipeID: string, description: string, imageUrl: string, rank: number): JQueryPromise<any> {
@@ -26,20 +25,13 @@ module eatweek.RecipeService {
 			rank: rank
 		};
 
-		return $.ajax({
-			method: "POST",
-			url: "/addrecipe",
-			data: callData
-		});
+		return eatweek.service.SendRequest<any>(eatweek.service.Method.GET, "/addrecipe", callData);
 	}
 
 	export function GetThisWeek(date: string = undefined): JQueryPromise<string> {
-		return $.ajax({
-			method: "GET",
-			url: "/thisweek",
-			data: {
-				date: date
-			}
-		});
+		var data = {
+			date: date
+		};
+		return eatweek.service.SendRequest<string>(eatweek.service.Method.GET, "/thisweek", data);
 	}
 }
