@@ -58,7 +58,7 @@ class App < Sinatra::Base
 	end
 
 	get '/thisweek' do
-		slim :this_week, layout: false, :locals => { model: AddRecipe.new }
+		slim :this_week, layout: false, :locals => { model: WeeklyRecipes.new }
 	end
 
 	get '/addrecipe' do

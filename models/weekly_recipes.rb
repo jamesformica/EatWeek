@@ -1,4 +1,4 @@
-class AddRecipe
+class WeeklyRecipes
 
 	attr_accessor :today, :grouped_recipes
 
