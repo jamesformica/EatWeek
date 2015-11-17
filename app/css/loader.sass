@@ -1,8 +1,5 @@
 @import app/css/_vars
 
-$loader-content-width: 300px
-$loader-content-height: 80px
-
 .loader-backdrop
 	position: fixed
 	top: 0
@@ -10,7 +7,7 @@ $loader-content-height: 80px
 	width: 100%
 	height: 100%
 	background: transparent
-	z-index: 99999
+	z-index: $loader-zindex
 
 	> .loader-content
 		position: absolute
