@@ -54,11 +54,16 @@ class App < Sinatra::Base
 	end
 	
 	get '/' do
+		@today = Date.today
 		slim :index
 	end
 
 	get '/thisweek' do
 		slim :this_week, layout: false, :locals => { model: WeeklyRecipes.new(params["date"]) }
+	end
+
+	get '/datecontrols' do
+		slim :controls, layout: false, :locals => { date: Date.parse(params["date"]) }
 	end
 
 	get '/addrecipe' do

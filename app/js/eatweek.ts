@@ -31,12 +31,16 @@ module eatweek {
 
 		$pageHeader.on("click", '.ui-prev-week', (e) => {
 			var $prev = $(e.currentTarget);
-			ReloadThisWeek($prev.data("date").toString());
+			var date = $prev.data("date").toString();
+			ReloadDateControls($pageHeader, date);
+			ReloadThisWeek(date);
 		});
 
 		$pageHeader.on("click", '.ui-next-week', (e) => {
 			var $next = $(e.currentTarget);
-			ReloadThisWeek($next.data("date").toString());
+			var date = $next.data("date").toString();
+			ReloadDateControls($pageHeader, date);
+			ReloadThisWeek(date);
 		});
 
 		eatweek.utils.HeightToBottom(eatweek.$thisWeek.find('.ui-week-column'));
@@ -59,6 +63,18 @@ module eatweek {
 	export function ReloadThisWeek(date: string = undefined): void {
 		eatweek.RecipeService.GetThisWeek(date).done((html) => {
 			eatweek.$thisWeek.html(html);
+		});
+	}
+
+	export function ReloadDateControls($header: JQuery, date: string): void {
+		$.ajax({
+			method: "GET",
+			url: "/datecontrols",
+			data: {
+				date: date
+			}
+		}).done((html: string) => {
+			$header.find('.ui-date-controls').replaceWith($.parseHTML(html));
 		});
 	}
 
