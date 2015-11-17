@@ -7,8 +7,9 @@ module eatweek {
 
 	export function InitialiseEatWeek($container: JQuery): void {
 
-		var $hamburger = $container.find('.ui-hamburger');
-		var $addRecipe = $container.find('.ui-add-recipe');
+		var $pageHeader = $container.find('.ui-page-header');
+		var $hamburger = $pageHeader.find('.ui-hamburger');
+		var $addRecipe = $pageHeader.find('.ui-add-recipe');
 		var mmenu = new eatweek.mmenu.Mmenu($hamburger);
 
 		eatweek.$thisWeek = $container.find('.ui-this-week');
@@ -28,6 +29,16 @@ module eatweek {
 			ViewRecipe($(e.currentTarget));
 		});
 
+		$pageHeader.on("click", '.ui-prev-week', (e) => {
+			var $prev = $(e.currentTarget);
+			ReloadThisWeek($prev.data("date").toString());
+		});
+
+		$pageHeader.on("click", '.ui-next-week', (e) => {
+			var $next = $(e.currentTarget);
+			ReloadThisWeek($next.data("date").toString());
+		});
+
 		eatweek.utils.HeightToBottom(eatweek.$thisWeek.find('.ui-week-column'));
 	}
 
@@ -45,8 +56,8 @@ module eatweek {
 		});
 	}
 
-	export function ReloadThisWeek(): void {
-		eatweek.RecipeService.GetThisWeek().done((html) => {
+	export function ReloadThisWeek(date: string = undefined): void {
+		eatweek.RecipeService.GetThisWeek(date).done((html) => {
 			eatweek.$thisWeek.html(html);
 		});
 	}

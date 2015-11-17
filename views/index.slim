@@ -2,13 +2,10 @@
 	
 	article class="page-wrapper"
 
-		header class="page-header"
+		header class="page-header ui-page-header"
 			i class="fa fa-bars hamburger ui-hamburger"
 
-			div class="controls"
-				i class="fa fa-chevron-left"
-				span week
-				i class="fa fa-chevron-right"
+			== slim :"controls", layout: false, :locals => { date: Date.today }
 
 			div class="buttons"
 				button class="primary ui-add-recipe"

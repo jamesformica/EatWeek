@@ -2,8 +2,12 @@ class WeeklyRecipes
 
 	attr_accessor :today, :grouped_recipes
 
-	def initialize
-		@today = Date.today
+	def initialize(date = nil)
+		if (date.nil?)
+			@today = Date.today
+		else
+			@today = Date.parse(date)
+		end
 
 		@grouped_recipes = RecipeHelper.get_weekly_recipes(@today)
 	end
