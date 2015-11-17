@@ -67,13 +67,11 @@ module eatweek {
 	}
 
 	export function ReloadDateControls($header: JQuery, date: string): void {
-		$.ajax({
-			method: "GET",
-			url: "/datecontrols",
-			data: {
-				date: date
-			}
-		}).done((html: string) => {
+		var data = {
+			date: date
+		};
+
+		eatweek.service.SendRequest<string>(eatweek.service.Method.GET, "/datecontrols", data).done((html) => {
 			$header.find('.ui-date-controls').replaceWith($.parseHTML(html));
 		});
 	}
