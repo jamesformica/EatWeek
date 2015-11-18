@@ -5,7 +5,7 @@
 			span class="dayname"
 				| #{week_date.dayname}
 			span class="date"
-				| #{week_date.to_s}
+				| #{week_date.strftime('%a %d %b')}
 
 		section
 			- if !model.grouped_recipes[week_date.wday].nil?
