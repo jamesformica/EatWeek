@@ -7,8 +7,6 @@ require 'slim'
 require 'open-uri'
 require 'sinatra/activerecord'
 
-# The main class that will run the web application
-# It contains some asset configuration and then the routes
 class App < Sinatra::Base
 
 	(Dir['./models/*.rb'].sort).each do |file|
