@@ -4,13 +4,13 @@ require 'sinatra/assetpack'
 require 'sinatra/json'
 require 'sass'
 require 'slim'
-require 'unirest'
 require 'open-uri'
 require 'sinatra/activerecord'
 
 require_relative 'helpers/container_helper'
 require_relative 'helpers/date_helper'
 require_relative 'helpers/recipe_helper'
+require_relative 'helpers/food_2_fork_helper'
 
 # The main class that will run the web application
 # It contains some asset configuration and then the routes
@@ -80,23 +80,12 @@ class App < Sinatra::Base
 	end
 
 	get '/searchrecipe' do
-		response = Unirest.get "http://food2fork.com/api/search",
-		parameters: {
-			"key" => "7e110811cf0df3c6c089462aede9beca",
-			"q" => params['text'],
-			"sort" => "r"
-		}
-
+		response = Food2ForkHelper.search_for_recipes(params['text'])
 		json response.body
 	end
 
 	get '/getrecipe' do
-		response = Unirest.get "http://food2fork.com/api/get",
-		parameters: {
-			"key" => "7e110811cf0df3c6c089462aede9beca",
-			"rId" => params["recipe_id"]
-		}
-
+		response = Food2ForkHelper.get_recipe(params["recipe_id"])
 		json response.body
 	end
 
