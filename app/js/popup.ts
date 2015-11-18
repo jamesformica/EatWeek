@@ -45,9 +45,6 @@ module eatweek.popup {
 			$popup.addClass("medium");
 		}
 
-		var $loading = $("<i>")
-		.addClass("fa fa-spinner fa-spin loader ui-loader hidden");
-
 		var $header = $("<header>")
 		.text(title);
 
@@ -63,7 +60,6 @@ module eatweek.popup {
 		var $content = $("<section>")
 		.addClass("content ui-content");
 
-		$popup.append($loading);
 		$popup.append($header);
 		$popup.append($content);
 		$popupBackdrop.append($popup);
@@ -98,14 +94,6 @@ module eatweek.popup {
 		$popup.fadeOut(200, () => {
 			$popup.remove();
 		});
-	}
-
-	export function ShowLoader($element: JQuery): void {
-		ToggleLoader($element, false);
-	}
-
-	export function HideLoader($element: JQuery): void {
-		ToggleLoader($element, true);
 	}
 
 	function ToggleLoader($element: JQuery, state: boolean): void {

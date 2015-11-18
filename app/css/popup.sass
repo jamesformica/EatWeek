@@ -1,7 +1,5 @@
 @import app/css/_vars
 
-$loader-size: 50px
-
 .popup-backdrop
 	position: fixed
 	width: 100%
@@ -23,13 +21,6 @@ $loader-size: 50px
 	&.medium
 		width: 60%
 		left: 20%
-
-	> .loader
-		position: absolute
-		font-size: $loader-size
-		color: rgba(0,0,0,0.8)
-		left: calc(50% - #{$loader-size / 2})
-		top: calc(50% - #{$loader-size / 2})
 
 	> header
 		position: absolute

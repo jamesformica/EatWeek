@@ -57,20 +57,14 @@ module eatweek.recipe {
 		}
 
 		private SearchForRecipe(): void {
-			eatweek.popup.ShowLoader(this.$container);
-
 			// clear the existing recipes if any
 			this.$recipeContainer.empty();
 
 			eatweek.RecipeService.SearchForRecipe(this.$searchInput.val())
 			.done((recipes) => {
-				eatweek.popup.HideLoader(this.$container);
-
 				this.DisplayRecipes(recipes);
 			})
 			.fail(() => {
-				eatweek.popup.HideLoader(this.$container);
-
 				this.$recipeContainer.append(eatweek.utils.BuildNotification(utils.NotificationType.Warning, "Oopsies", "Something went wrong trying to find recipes."));
 			});
 		}
