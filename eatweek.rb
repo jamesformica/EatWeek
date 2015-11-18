@@ -7,42 +7,36 @@ require 'slim'
 require 'open-uri'
 require 'sinatra/activerecord'
 
-require_relative 'helpers/container_helper'
-require_relative 'helpers/date_helper'
-require_relative 'helpers/recipe_helper'
-require_relative 'helpers/food_2_fork_helper'
-
 # The main class that will run the web application
 # It contains some asset configuration and then the routes
 class App < Sinatra::Base
 
-	# load and require all model classes
 	(Dir['./models/*.rb'].sort).each do |file|
 		require file
 	end
+
+	(Dir['./helpers/*.rb'].sort).each do |file|
+		require file
+	end
+
+	register Sinatra::AssetPack
+	register Sinatra::ActiveRecordExtension
+
+	App.helpers ContainerHelper
 
 	set :sessions => true
 	
 	set :root, File.dirname(__FILE__)
 	set :public_folder, File.dirname(__FILE__) + '/app/'
 	
-	register Sinatra::AssetPack
-	register Sinatra::ActiveRecordExtension
-
-	App.helpers ContainerHelper
-	
-	# ASSET CONFIGURATION - define the assets that will be accessible #
 	assets do
-
 		js_compression  :jsmin
 		css_compression :sass
 
-		# define js variable to contain the collated and minified javascript files
 		js :main, '/js/main.js', [
 			'/js/dist/*.js',
 		]
 
-		# define a css variable to contain the converted and minified css files
 		css :main, [
 			'/css/*.css'
 		]
@@ -50,7 +44,6 @@ class App < Sinatra::Base
 		css :vendor, [
 			'/css/vendor/**/*.css'
 		]
-
 	end
 	
 	get '/' do
