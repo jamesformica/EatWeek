@@ -1,0 +1,5 @@
+
+div class="day-of-week ui-day-of-week"
+	- Date::DAYNAMES.each_with_index do |day, index|
+		span class=('active' if date.wday == index) data-dayindex="#{index}"
+			| #{day[0]}

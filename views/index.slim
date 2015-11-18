@@ -5,7 +5,7 @@
 		header class="page-header ui-page-header"
 			i class="fa fa-bars hamburger ui-hamburger"
 
-			== slim :"controls", layout: false, :locals => { date: @today }
+			== slim :controls, layout: false, :locals => { date: @today }
 
 			div class="buttons"
 				button class="primary ui-add-recipe"
@@ -17,7 +17,7 @@
 
 			section class="this-week ui-this-week"
 
-				== slim :"this_week", layout: false, :locals => { model: WeeklyRecipes.new }
+				== slim :this_week, layout: false, :locals => { model: WeeklyRecipes.new }
 
 nav id="mmenu"
 	ul

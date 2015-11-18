@@ -4,8 +4,11 @@ div class="cover-image" style="background-image: url('#{@recipe.image_path}')"
 	
 	input class="ui-hidden-recipeid" type="hidden" value="#{@recipe.recipe_id}"
 	div class="cover-content"
+
 		p class="title"
 			| #{@recipe.description}
+
+		== slim :day_of_week, layout: false, :locals => { date: @recipe.assigned_date }
 
 		div
 			ul class="ui-ingredients"

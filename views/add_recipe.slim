@@ -18,10 +18,6 @@
 			button type="submit" class="large"
 				i class="fa fa-search"
 
-			div class="day-of-week ui-day-of-week"
-
-				- Date::DAYNAMES.each_with_index do |day, index|
-					span class=('active' if @today.wday == index) data-dayindex="#{index}"
-						| #{day[0]}
+			== slim :day_of_week, layout: false, :locals => { date: @today }
 
 	div class="ui-recipes four-cards"
