@@ -71,7 +71,10 @@ module eatweek {
 
 		ReloadThisWeek(date: string = undefined): void {
 			eatweek.RecipeService.GetThisWeek(date).done((html) => {
-				this.$thisWeek.html(html);
+				this.$thisWeek.fadeOut(200, () => {
+					this.$thisWeek.html(html);
+					this.$thisWeek.show();
+				});
 			});
 		}
 
