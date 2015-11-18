@@ -24,10 +24,9 @@ class App < Sinatra::Base
 
 	App.helpers ContainerHelper
 
-	set :sessions => true
-	
 	set :root, File.dirname(__FILE__)
 	set :public_folder, File.dirname(__FILE__) + '/app/'
+	set :sessions => true
 	
 	assets do
 		js_compression  :jsmin
