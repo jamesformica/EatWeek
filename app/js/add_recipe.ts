@@ -99,7 +99,7 @@ module eatweek.recipe {
 			eatweek.RecipeService.AddRecipe(dayIndex, recipeID, description, imageUrl, rank)
 			.done(() => {
 				eatweek.popup.ClosePopup(this.$container);
-				eatweek.ReloadThisWeek();
+				eatweek.EatWeekInstance.ReloadThisWeek();
 			})
 			.fail(() => {
 				alert("nooooo");

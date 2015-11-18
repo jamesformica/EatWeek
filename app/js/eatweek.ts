@@ -3,77 +3,101 @@
 module eatweek {
 	"use strict";
 
-	export var $thisWeek: JQuery;
+	export var EatWeekInstance: EatWeek;
 
 	export function InitialiseEatWeek($container: JQuery): void {
+		eatweek.EatWeekInstance = new EatWeek($container);
+	}
 
-		var $pageHeader = $container.find('.ui-page-header');
-		var $hamburger = $pageHeader.find('.ui-hamburger');
-		var $addRecipe = $pageHeader.find('.ui-add-recipe');
-		var mmenu = new eatweek.mmenu.Mmenu($hamburger);
+	export class EatWeek {
 
-		eatweek.$thisWeek = $container.find('.ui-this-week');
-		eatweek.utils.HeightToBottom($thisWeek);
+		private $pageHeader: JQuery;
+		private $hamburger: JQuery;
+		private $addRecipe: JQuery;
+		private $thisWeek: JQuery;
 
-		$addRecipe.click(() => {
-			eatweek.popup.ShowInPopup({
-				Url: "/addrecipe",
-				Title: "Add Recipe",
-				Size: popup.PopupSize.Large,
-				Data: {},
-				ShowHeading: true
+		private mmenu: eatweek.mmenu.Mmenu;
+
+		constructor(private $container: JQuery) {
+			this.$pageHeader = this.$container.find('.ui-page-header');
+			this.$hamburger = this.$pageHeader.find('.ui-hamburger');
+			this.$addRecipe = this.$pageHeader.find('.ui-add-recipe');
+			this.$thisWeek = this.$container.find('.ui-this-week');
+
+			this.SetupEatWeek();
+		}
+		
+		private SetupEatWeek(): void {
+			this.SetupMmenu();
+			this.AttachEvents();
+
+			eatweek.utils.HeightToBottom(this.$thisWeek);
+			eatweek.utils.HeightToBottom(this.$thisWeek.find('.ui-week-column'));
+		}
+
+		private SetupMmenu(): void {
+			this.mmenu = new eatweek.mmenu.Mmenu(this.$hamburger);
+		}
+
+		private AttachEvents(): void {
+			this.$addRecipe.click(() => {
+				eatweek.popup.ShowInPopup({
+					Url: "/addrecipe",
+					Title: "Add Recipe",
+					Size: eatweek.popup.PopupSize.Large,
+					Data: {},
+					ShowHeading: true
+				});
 			});
-		});
 
-		eatweek.$thisWeek.on("click", '.ui-thisweek-card', (e) => {
-			ViewRecipe($(e.currentTarget));
-		});
+			this.$thisWeek.on("click", '.ui-thisweek-card', (e) => {
+				this.ViewRecipe($(e.currentTarget));
+			});
 
-		$pageHeader.on("click", '.ui-prev-week', (e) => {
-			var $prev = $(e.currentTarget);
-			var date = $prev.data("date").toString();
-			ReloadDateControls($pageHeader, date);
-			ReloadThisWeek(date);
-		});
+			this.$pageHeader.on("click", '.ui-prev-week', (e) => {
+				var $prev = $(e.currentTarget);
+				var date = $prev.data("date").toString();
+				this.ReloadDateControls(this.$pageHeader, date);
+				this.ReloadThisWeek(date);
+			});
 
-		$pageHeader.on("click", '.ui-next-week', (e) => {
-			var $next = $(e.currentTarget);
-			var date = $next.data("date").toString();
-			ReloadDateControls($pageHeader, date);
-			ReloadThisWeek(date);
-		});
+			this.$pageHeader.on("click", '.ui-next-week', (e) => {
+				var $next = $(e.currentTarget);
+				var date = $next.data("date").toString();
+				this.ReloadDateControls(this.$pageHeader, date);
+				this.ReloadThisWeek(date);
+			});
+		}
 
-		eatweek.utils.HeightToBottom(eatweek.$thisWeek.find('.ui-week-column'));
-	}
+		ReloadThisWeek(date: string = undefined): void {
+			eatweek.RecipeService.GetThisWeek(date).done((html) => {
+				this.$thisWeek.html(html);
+			});
+		}
 
-	export function ViewRecipe($element: JQuery): void {
-		var id: string = $element.data("id").toString();
+		ReloadDateControls($header: JQuery, date: string): void {
+			var data = {
+				date: date
+			};
 
-		eatweek.popup.ShowInPopup({
-			Url: "/recipe",
-			Title: "",
-			Size: popup.PopupSize.Medium,
-			Data: {
-				id: id
-			},
-			ShowHeading: false
-		});
-	}
+			eatweek.service.SendRequest<string>(eatweek.service.Method.GET, "/datecontrols", data, false).done((html) => {
+				$header.find('.ui-date-controls').replaceWith($.parseHTML(html));
+			});
+		}
 
-	export function ReloadThisWeek(date: string = undefined): void {
-		eatweek.RecipeService.GetThisWeek(date).done((html) => {
-			eatweek.$thisWeek.html(html);
-		});
-	}
+		ViewRecipe($element: JQuery): void {
+			var id: string = $element.data("id").toString();
 
-	export function ReloadDateControls($header: JQuery, date: string): void {
-		var data = {
-			date: date
-		};
-
-		eatweek.service.SendRequest<string>(eatweek.service.Method.GET, "/datecontrols", data, false).done((html) => {
-			$header.find('.ui-date-controls').replaceWith($.parseHTML(html));
-		});
+			eatweek.popup.ShowInPopup({
+				Url: "/recipe",
+				Title: "",
+				Size: popup.PopupSize.Medium,
+				Data: {
+					id: id
+				},
+				ShowHeading: false
+			});
+		}
 	}
 
 }
