@@ -1,11 +1,9 @@
 require 'sinatra'
-require 'sinatra/base'
 require 'sinatra/assetpack'
 require 'sinatra/json'
+require 'sinatra/activerecord'
 require 'sass'
 require 'slim'
-require 'open-uri'
-require 'sinatra/activerecord'
 
 class App < Sinatra::Base
 

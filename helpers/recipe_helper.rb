@@ -1,4 +1,5 @@
 require 'securerandom'
+require 'open-uri'
 
 class RecipeHelper
 
