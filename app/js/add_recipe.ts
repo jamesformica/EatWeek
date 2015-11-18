@@ -65,27 +65,31 @@ module eatweek.recipe {
 				this.DisplayRecipes(recipes);
 			})
 			.fail(() => {
-				this.$recipeContainer.append(eatweek.utils.BuildNotification(utils.NotificationType.Warning, "Oopsies", "Something went wrong trying to find recipes."));
+				this.$recipeContainer.append(eatweek.utils.BuildNotification(utils.NotificationType.Error, "Oopsies", "Something went wrong trying to find recipes."));
 			});
 		}
 
 		private DisplayRecipes(recipes: RecipeSearchResult): void {
 			var count = recipes.count;
 
-			for (var i = 0; i < recipes.recipes.length; i++) {
-				var recipe = recipes.recipes[i];
+			if (count > 0) {
+				for (var i = 0; i < recipes.recipes.length; i++) {
+					var recipe = recipes.recipes[i];
 
-				// get the html as a string so we can replce the fun bits
-				var newCloneCard: string = this.$cloneCard.clone().prop("outerHTML");
+					// get the html as a string so we can replce the fun bits
+					var newCloneCard: string = this.$cloneCard.clone().prop("outerHTML");
 
-				newCloneCard = eatweek.utils.ReplaceAll(newCloneCard, "hidden", "");
-				newCloneCard = eatweek.utils.ReplaceAll(newCloneCard, "{imageUrl}", recipe.image_url);
-				newCloneCard = eatweek.utils.ReplaceAll(newCloneCard, "{description}", recipe.title);
-				newCloneCard = eatweek.utils.ReplaceAll(newCloneCard, "{publisher}", recipe.publisher);
-				newCloneCard = eatweek.utils.ReplaceAll(newCloneCard, "{recipe_id}", recipe.recipe_id);
-				newCloneCard = eatweek.utils.ReplaceAll(newCloneCard, "{rank}", Math.round(recipe.social_rank));
+					newCloneCard = eatweek.utils.ReplaceAll(newCloneCard, "hidden", "");
+					newCloneCard = eatweek.utils.ReplaceAll(newCloneCard, "{imageUrl}", recipe.image_url);
+					newCloneCard = eatweek.utils.ReplaceAll(newCloneCard, "{description}", recipe.title);
+					newCloneCard = eatweek.utils.ReplaceAll(newCloneCard, "{publisher}", recipe.publisher);
+					newCloneCard = eatweek.utils.ReplaceAll(newCloneCard, "{recipe_id}", recipe.recipe_id);
+					newCloneCard = eatweek.utils.ReplaceAll(newCloneCard, "{rank}", Math.round(recipe.social_rank));
 
-				this.$recipeContainer.append($.parseHTML(newCloneCard));
+					this.$recipeContainer.append($.parseHTML(newCloneCard));
+				}
+			} else {
+				this.$recipeContainer.append(eatweek.utils.BuildNotification(utils.NotificationType.Warning, "No recipes found", "Please try a different search and make sure everything is spelt correctly."));
 			}
 		}
 

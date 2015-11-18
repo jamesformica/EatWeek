@@ -18,7 +18,7 @@ module eatweek.recipe {
 		}).done((recipe) => {
 			DisplayRecipe(recipe.recipe, $ingredients);
 		}).fail(() => {
-			alert("nuuuuuu");
+
 		});
 	}
 

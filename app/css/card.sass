@@ -33,9 +33,7 @@ $card-margin: $standard-padding
 		+font-normal()
 		background-color: white
 		word-break: break-all
-		white-space: nowrap
-		overflow: hidden
-		text-overflow: ellipsis
+		+ellipsis()
 		display: block
 
 	> .overlay
@@ -48,6 +46,7 @@ $card-margin: $standard-padding
 		color: white
 		padding: $standard-padding / 2
 		box-sizing: border-box
+		+ellipsis()
 
 	&.horizontal
 		height: $card-image-height
