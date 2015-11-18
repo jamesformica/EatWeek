@@ -4,6 +4,7 @@ $card-image-height: 200px
 $card-margin: $standard-padding
 
 .card
+	position: relative
 	box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.22),0 2px 4px rgba(0,0,0,.34)
 	cursor: pointer
 
@@ -36,6 +37,16 @@ $card-margin: $standard-padding
 		overflow: hidden
 		text-overflow: ellipsis
 		display: block
+
+	> .overlay
+		position: absolute
+		width: 100%
+		left: 0
+		bottom: 0
+		background-color: rgba(0,0,0,0.4)
+		+font-normal()
+		color: white
+		padding: $standard-padding / 2
 
 	&.horizontal
 		height: $card-image-height

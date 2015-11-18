@@ -1,6 +1,6 @@
 @import app/css/_vars
 
-$column-border: 1px solid $primary-colour
+$column-border: 2px solid white
 
 .week-column
 	width: 250px
@@ -39,3 +39,11 @@ $column-border: 1px solid $primary-colour
 	> section
 		float: left
 		width: 100%
+
+		> .card
+			.image
+				transition: 0.1s
+
+			&:hover
+				> .image
+					transform: scale(1.05)
