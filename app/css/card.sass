@@ -8,10 +8,6 @@ $card-margin: $standard-padding
 	box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.22),0 2px 4px rgba(0,0,0,.34)
 	cursor: pointer
 
-	&.single
-		width: 90%
-		margin: $standard-padding / 2 auto
-
 	&.fill
 		box-shadow: none
 		width: 100%
@@ -48,20 +44,6 @@ $card-margin: $standard-padding
 		padding: $standard-padding / 2
 		box-sizing: border-box
 		+ellipsis()
-
-	&.horizontal
-		height: $card-image-height
-
-		> .image
-			float: left
-			width: $card-image-height
-			display: inline-block
-
-		> .content
-			float: left
-			width: calc(100% - #{$card-image-height})
-			height: $card-image-height
-			box-sizing: border-box
 			
 
 // Card Layouts
