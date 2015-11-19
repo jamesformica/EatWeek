@@ -1,4 +1,5 @@
 /// <reference path="../types/jquery.d.ts" />
+/// <reference path="../types/vgrid.d.ts" />
 /// <reference path="../types/food2fork.d.ts" />
 
 module eatweek.recipe {
@@ -88,6 +89,17 @@ module eatweek.recipe {
 
 					this.$recipeContainer.append($.parseHTML(newCloneCard));
 				}
+
+				this.$recipeContainer.vgrid({
+					easing: "easeOutQuint",
+					time: 500,
+					delay: 20,
+					fadeIn: {
+						time: 300,
+						delay: 50
+					}
+				});
+
 			} else {
 				this.$recipeContainer.append(eatweek.utils.BuildNotification(utils.NotificationType.Warning, "No recipes found", "Please try a different search and make sure everything is spelt correctly."));
 			}

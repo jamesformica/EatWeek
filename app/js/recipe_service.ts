@@ -25,7 +25,7 @@ module eatweek.RecipeService {
 			rank: rank
 		};
 
-		return eatweek.service.SendRequest<any>(eatweek.service.Method.GET, "/addrecipe", callData);
+		return eatweek.service.SendRequest<any>(eatweek.service.Method.POST, "/addrecipe", callData);
 	}
 
 	export function GetThisWeek(date: string = undefined): JQueryPromise<string> {
