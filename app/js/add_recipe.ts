@@ -90,6 +90,7 @@ module eatweek.recipe {
 					this.$recipeContainer.append($.parseHTML(newCloneCard));
 				}
 
+				// use Vgrid to make it look all "pintrest" like
 				this.$recipeContainer.vgrid({
 					easing: "easeOutQuint",
 					time: 500,
