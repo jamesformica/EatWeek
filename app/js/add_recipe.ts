@@ -1,6 +1,7 @@
 /// <reference path="../types/jquery.d.ts" />
 /// <reference path="../types/vgrid.d.ts" />
 /// <reference path="../types/food2fork.d.ts" />
+/// <reference path="../types/waitforimages.d.ts" />
 
 module eatweek.recipe {
 	"use strict";
@@ -90,15 +91,18 @@ module eatweek.recipe {
 					this.$recipeContainer.append($.parseHTML(newCloneCard));
 				}
 
-				// use Vgrid to make it look all "pintrest" like
-				this.$recipeContainer.vgrid({
-					easing: "easeOutQuint",
-					time: 500,
-					delay: 20,
-					fadeIn: {
-						time: 300,
-						delay: 50
-					}
+				// wait for all images to load
+				this.$recipeContainer.waitForImages().done(() => {
+					// use Vgrid to make it look all "pintrest" like
+					this.$recipeContainer.vgrid({
+						easing: "easeOutQuint",
+						time: 500,
+						delay: 20,
+						fadeIn: {
+							time: 300,
+							delay: 50
+						}
+					});
 				});
 
 			} else {
