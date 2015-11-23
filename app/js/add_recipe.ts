@@ -91,18 +91,20 @@ module eatweek.recipe {
 					this.$recipeContainer.append($.parseHTML(newCloneCard));
 				}
 
+				// use Vgrid to make it look all "pintrest" like
+				var vgrid = this.$recipeContainer.vgrid({
+					easing: "easeOutQuint",
+					time: 500,
+					delay: 20,
+					fadeIn: {
+						time: 300,
+						delay: 50
+					}
+				});
+
 				// wait for all images to load
-				this.$recipeContainer.waitForImages().done(() => {
-					// use Vgrid to make it look all "pintrest" like
-					this.$recipeContainer.vgrid({
-						easing: "easeOutQuint",
-						time: 500,
-						delay: 20,
-						fadeIn: {
-							time: 300,
-							delay: 50
-						}
-					});
+				this.$recipeContainer.waitForImages().progress(() => {
+					vgrid.vgrefresh();
 				});
 
 			} else {

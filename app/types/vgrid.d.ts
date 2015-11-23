@@ -1,5 +1,9 @@
 interface JQuery {
-	vgrid(options: VGridOptions): void;
+	vgrid(options: VGridOptions): VGridObject;
+}
+
+interface VGridObject {
+	vgrefresh(): void;
 }
 
 interface VGridOptions {
