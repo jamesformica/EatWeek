@@ -79,6 +79,15 @@ module eatweek.popup {
 		}).children().click((e) => {
 			e.stopPropagation();
 		});
+
+		$(document).on("keyup.closepopup", (event) => {
+			var $target = $(event.target);
+
+			if (!$target.is('input') && event.keyCode === 27) {
+				$(document).off("keyup.closepopup");
+				ClosePopup($popup);
+			}
+		});
 	}
 
 	export function ClosePopup($element: JQuery): void {

@@ -102,7 +102,7 @@ module eatweek.recipe {
 					}
 				});
 
-				// wait for all images to load
+				// after each image load, refresh vgrid
 				this.$recipeContainer.waitForImages().progress(() => {
 					vgrid.vgrefresh();
 				});
