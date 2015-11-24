@@ -4,9 +4,9 @@ source 'https://rubygems.org'
 # Bug: https://gist.github.com/celsoMartins/9b9935c07eaaa334d346
 # Fixing Commit: https://github.com/sinatra/sinatra/commit/b39d72d2a5b824b5f607b7825c4b076f527461a1
 
-ruby "2.0.0"
+ruby '2.0.0'
 
-gem 'sinatra', '1.4.6', :github => "sinatra/sinatra"
+gem 'sinatra', '1.4.6', :github => 'sinatra/sinatra'
 
 gem 'rake'
 
