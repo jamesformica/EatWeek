@@ -10,7 +10,7 @@ $column-border: $solid-border
 	overflow: hidden
 	background-color: white
 	margin: 0 $column-margin
-	box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24)
+	box-shadow: $tight-shadow
 	border-radius: $standard-radius
 
 	&:first-child
@@ -20,6 +20,8 @@ $column-border: $solid-border
 		margin-right: $column-margin * 2
 
 	> header
+		width: 100%
+		float: left
 		text-align: center
 		padding: $standard-padding
 		background-color: white
@@ -48,7 +50,11 @@ $column-border: $solid-border
 		width: 100%
 
 		> .card
+			width: calc(100% - #{$standard-padding * 2})
+			margin: 0 auto
+			margin-top: $standard-padding
 			overflow: hidden
+			box-shadow: none
 			
 			img
 				transition: 0.1s

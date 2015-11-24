@@ -10,9 +10,14 @@
 		section
 			- if !model.grouped_recipes[week_date.wday].nil?
 				- model.grouped_recipes[week_date.wday].each do |recipe|
-					div class="card fill ui-thisweek-card" data-id="#{recipe.id}"
+					div class="card ui-thisweek-card" data-id="#{recipe.id}"
 						image src="#{recipe.image_path}"
 				
+						span class="rating"
+							i class=(recipe.rank >= 50 ? 'fa fa-thumbs-up' : 'fa fa-thumbs-down')
+							| #{recipe.rank}
+							| %
+		 				
 		 				div class="overlay"
 		 					span
 		 						| #{recipe.description}
