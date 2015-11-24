@@ -4,13 +4,13 @@ $column-border: $solid-border
 
 .week-column
 	width: 250px
-	border-right: $column-border
 	display: inline-block
 	height: 100%
 	overflow: hidden
-
-	&:nth-child(even)
-		background-color: white
+	background-color: white
+	margin: 0 $standard-padding / 2
+	box-shadow: $small-shadow
+	border-radius: $standard-radius
 
 	&:last-child
 		border-right: none
@@ -19,7 +19,6 @@ $column-border: $solid-border
 		text-align: center
 		padding: $standard-padding
 		background-color: white
-		border-bottom: $column-border
 
 		> .dayname
 			display: block
