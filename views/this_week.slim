@@ -14,7 +14,7 @@
 						image src="#{recipe.image_path}"
 				
 						span class="rating"
-							i class=(recipe.rank >= 50 ? 'fa fa-thumbs-up' : 'fa fa-thumbs-down')
+							i class=('fa ' + (recipe.rank >= 50 ? 'fa-thumbs-up' : 'fa-thumbs-down'))
 							| #{recipe.rank}
 							| %
 		 				
