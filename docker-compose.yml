@@ -1,0 +1,8 @@
+web:
+  build: .
+  ports:
+   - "80:80"
+  volumes:
+   - .:/eatweek
+  environment:
+    RACK_ENV: development
