@@ -2,6 +2,7 @@ require 'sinatra'
 require 'sinatra/assetpack'
 require 'sinatra/json'
 require 'sinatra/activerecord'
+require "sinatra/reloader"
 require 'sass'
 require 'slim'
 
@@ -23,6 +24,10 @@ class App < Sinatra::Base
 	set :root, File.dirname(__FILE__)
 	set :public_folder, File.dirname(__FILE__) + '/app/'
 	set :sessions => true
+
+	configure :development do
+		register Sinatra::Reloader
+	end
 	
 	assets do
 		js_compression  :jsmin
