@@ -30,12 +30,30 @@ module eatweek {
 		private SetupEatWeek(): void {
 			this.SetupMmenu();
 			this.AttachEvents();
+			this.PutTodayInCentre();
 
 			eatweek.utils.HeightToBottom(this.$thisWeek);
 		}
 
 		private SetupMmenu(): void {
 			this.mmenu = new eatweek.mmenu.Mmenu(this.$hamburger);
+		}
+
+		private PutTodayInCentre(): void {
+			var $activeColumn = this.$thisWeek.find('.ui-week-column header.active').first();
+			var c_width = $activeColumn.outerWidth();
+			var c_left = $activeColumn.offset().left;
+			var w_width = $(window).width();
+			
+			var whereTheColumnIs = c_left + c_width;
+
+			if (whereTheColumnIs > w_width) {
+				var scrollLength = c_left + (c_width / 2) - (w_width / 2);
+				
+				this.$thisWeek.animate({
+					scrollLeft: scrollLength
+				}, 200);
+			}
 		}
 
 		private AttachEvents(): void {
