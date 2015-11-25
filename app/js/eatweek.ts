@@ -32,7 +32,6 @@ module eatweek {
 			this.AttachEvents();
 
 			eatweek.utils.HeightToBottom(this.$thisWeek);
-			eatweek.utils.HeightToBottom(this.$thisWeek.find('.ui-week-column section'));
 		}
 
 		private SetupMmenu(): void {
