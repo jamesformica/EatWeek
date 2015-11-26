@@ -28,8 +28,18 @@ button
 		background-color: $primary-colour
 		color: white
 
-	&:active
-		box-shadow: inset #{$input-shadow}
+		&:active
+			box-shadow: inset #{$input-shadow}
 
-	&:hover
-		background-color: darken($primary-colour, 4%)
+		&:hover
+			background-color: darken($primary-colour, 4%)
+
+	&.secondary
+		background-color: transparent
+		box-shadow: none
+
+		&:hover
+			text-decoration: underline
+
+
+	

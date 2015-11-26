@@ -60,7 +60,7 @@ class App < Sinatra::Base
 	end
 
 	get '/addrecipe' do
-		@today = Date.today
+		@today = Date.parse(params["date"])
 		slim :add_recipe, layout: false
 	end
 

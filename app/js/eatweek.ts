@@ -21,7 +21,7 @@ module eatweek {
 		constructor(private $container: JQuery) {
 			this.$pageHeader = this.$container.find('.ui-page-header');
 			this.$hamburger = this.$pageHeader.find('.ui-hamburger');
-			this.$addRecipe = this.$pageHeader.find('.ui-add-recipe');
+			this.$addRecipe = this.$container.find('.ui-add-recipe');
 			this.$thisWeek = this.$container.find('.ui-this-week');
 
 			this.SetupEatWeek();
@@ -47,22 +47,22 @@ module eatweek {
 			
 			var whereTheColumnIs = c_left + c_width;
 
-			if (whereTheColumnIs > w_width) {
-				var scrollLength = c_left + (c_width / 2) - (w_width / 2);
-				
-				this.$thisWeek.animate({
-					scrollLeft: scrollLength
-				}, 200);
-			}
+			var scrollLength = c_left + (c_width / 2) - (w_width / 2);
+			
+			this.$thisWeek.animate({
+				scrollLeft: scrollLength
+			}, 200);
 		}
 
 		private AttachEvents(): void {
-			this.$addRecipe.click(() => {
+			this.$addRecipe.click((e) => {
 				eatweek.popup.ShowInPopup({
 					Url: "/addrecipe",
 					Title: "Add Recipe",
 					Size: eatweek.popup.PopupSize.Large,
-					Data: {},
+					Data: {
+						date: $(e.currentTarget).data("date")
+					},
 					ShowHeading: true
 				});
 			});
