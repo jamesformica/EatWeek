@@ -4,7 +4,6 @@ require 'open-uri'
 class RecipeHelper
 
 	def self.get_weekly_recipes(date_in_week)
-
 		# retrieve all recipes within those dates
 		recipes = Recipe.where(assigned_date: date_in_week.beginning_of_week..date_in_week.end_of_week)
 
