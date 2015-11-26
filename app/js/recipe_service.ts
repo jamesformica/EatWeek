@@ -2,7 +2,7 @@ module eatweek.RecipeService {
 	"use strict";
 
 	interface IAddRecipe {
-		day_index: number;
+		date: string;
 		recipe_id: string;
 		description: string;
 		image_url: string;
@@ -16,9 +16,9 @@ module eatweek.RecipeService {
 		return eatweek.service.SendRequest<RecipeSearchResult>(eatweek.service.Method.GET, "/searchrecipe", data);
 	}
 
-	export function AddRecipe(dayIndex: number, recipeID: string, description: string, imageUrl: string, rank: number): JQueryPromise<any> {
+	export function AddRecipe(date: string, recipeID: string, description: string, imageUrl: string, rank: number): JQueryPromise<any> {
 		var callData: IAddRecipe = {
-			day_index: dayIndex,
+			date: date,
 			recipe_id: recipeID,
 			description: description,
 			image_url: imageUrl,

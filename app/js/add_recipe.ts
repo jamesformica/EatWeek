@@ -116,10 +116,10 @@ module eatweek.recipe {
 			var recipeID = $recipe.data("recipeid").toString();
 			var description = $recipe.data("description").toString();
 			var imageUrl = $recipe.data("imageurl").toString();
-			var dayIndex = Number(this.$dayOfWeekContainer.find(".active").first().data("dayindex"));
+			var date = this.$dayOfWeekContainer.find(".active").first().data("date");
 			var rank = Number($recipe.data("rank"));
 
-			eatweek.RecipeService.AddRecipe(dayIndex, recipeID, description, imageUrl, rank)
+			eatweek.RecipeService.AddRecipe(date, recipeID, description, imageUrl, rank)
 			.done(() => {
 				eatweek.popup.ClosePopup(this.$container);
 				eatweek.EatWeekInstance.ReloadThisWeek();

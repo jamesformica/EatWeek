@@ -23,7 +23,7 @@ class RecipeHelper
 
 	def self.add_recipe_from_params(params)
 		# get all the info from params
-		day_index = params["day_index"].to_i
+		date = Date.parse(params["date"])
 		recipe_id = params["recipe_id"]
 		description = params["description"]
 		image_url = params["image_url"]
@@ -37,11 +37,6 @@ class RecipeHelper
 		open(path, 'wb') do |image|
 			image << open(image_url).read
 		end
-
-		# calculate the actual date from the selected date's index
-		today = Date.today
-		index_diff = day_index - today.wday
-		date = today + index_diff
 
 		new_recipe = Recipe.new(recipe_id: recipe_id, description: description, image_path: public_path, assigned_date: date, rank: rank)
 
