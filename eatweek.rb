@@ -51,6 +51,10 @@ class App < Sinatra::Base
 		slim :index
 	end
 
+	get '/login' do
+		slim :login
+	end
+
 	get '/thisweek' do
 		slim :this_week, layout: false, :locals => { model: WeeklyRecipes.new(params["date"]) }
 	end

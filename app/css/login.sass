@@ -1,0 +1,25 @@
+@import app/css/_vars
+
+
+$login-width: 30%
+$login-height: 40%
+
+.login
+	position: absolute
+	width: $login-width
+	height: $login-height
+	top: calc(50% - #{$login-height / 2})
+	left: calc(50% - #{$login-width / 2})
+
+	.logo
+		display: block
+		text-align: center
+		+font-fancy()
+		+font-mega()
+		color: white
+		text-shadow: $small-shadow
+
+	input
+		display: block
+		margin: $standard-padding auto
+		width: 80%
