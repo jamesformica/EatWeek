@@ -8,6 +8,17 @@ body
 	color: black
 	-webkit-text-size-adjust: none
 
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		right: 0
+		width: 0
+		height: 0
+		border: 200px solid transparent
+		border-top-color: lighten($page-background, 5%)
+		border-right-color: lighten($page-background, 5%)
+
 	article.page-wrapper
 		position: relative
 
