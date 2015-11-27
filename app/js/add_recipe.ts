@@ -116,7 +116,7 @@ module eatweek.recipe {
 			var recipeID = $recipe.data("recipeid").toString();
 			var description = $recipe.data("description").toString();
 			var imageUrl = $recipe.data("imageurl").toString();
-			var date = this.$dayOfWeekContainer.find(".active").first().data("date");
+			var date = this.$dayOfWeekContainer.find(".active").first().data("date").toString();
 			var rank = Number($recipe.data("rank"));
 
 			eatweek.RecipeService.AddRecipe(date, recipeID, description, imageUrl, rank)

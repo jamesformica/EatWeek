@@ -13,7 +13,6 @@ module eatweek {
 
 		private $pageHeader: JQuery;
 		private $hamburger: JQuery;
-		private $addRecipe: JQuery;
 		private $thisWeek: JQuery;
 
 		private mmenu: eatweek.mmenu.Mmenu;
@@ -21,7 +20,6 @@ module eatweek {
 		constructor(private $container: JQuery) {
 			this.$pageHeader = this.$container.find('.ui-page-header');
 			this.$hamburger = this.$pageHeader.find('.ui-hamburger');
-			this.$addRecipe = this.$container.find('.ui-add-recipe');
 			this.$thisWeek = this.$container.find('.ui-this-week');
 
 			this.SetupEatWeek();
@@ -55,7 +53,7 @@ module eatweek {
 		}
 
 		private AttachEvents(): void {
-			this.$addRecipe.click((e) => {
+			this.$thisWeek.on("click", '.ui-add-recipe', (e) => {
 				eatweek.popup.ShowInPopup({
 					Url: "/addrecipe",
 					Title: "Add Recipe",
