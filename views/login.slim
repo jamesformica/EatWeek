@@ -1,15 +1,8 @@
+script [src="https://apis.google.com/js/platform.js" async defer]
+meta name="google-signin-client_id" content="57331195392-h9j6sss30srj57uda7c4418jl7pf3p6f.apps.googleusercontent.com"
+
 div class="login"
 	span class="logo"
 		| Eat Week
 
-	input type="text" name="username" placeholder="username"
-
-	input type="password" name="password" placeholder="password"
-
-
-	button class="primary" type="button"
-		i class="fa fa-heart-o"
-		| Sign In
-
-	button class="secondary" type="button"
-		| Register
+	div class="g-signin2 google-button" data-onsuccess="OnSignIn"

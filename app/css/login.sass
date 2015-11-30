@@ -1,6 +1,5 @@
 @import app/css/_vars
 
-
 $login-width: 30%
 $login-height: 40%
 
@@ -10,22 +9,16 @@ $login-height: 40%
 	height: $login-height
 	top: calc(50% - #{$login-height / 2})
 	left: calc(50% - #{$login-width / 2})
+	text-align: center
 
 	.logo
 		display: block
-		text-align: center
 		+font-fancy()
 		+font-mega()
 		color: white
 		text-shadow: $small-shadow
+		margin-bottom: $standard-padding
 
-	input, button
-		margin: $standard-padding 0 0 0
-
-	input
-		display: block
-		width: 100%
-		box-sizing: border-box
-
-	button
-		float: right
+	.google-button
+		> div
+			margin: 0 auto
