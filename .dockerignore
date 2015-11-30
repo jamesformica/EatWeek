@@ -4,8 +4,8 @@ node_modules
 
 npm-debug.log
 
-app/js/dist
+app/js/*.ts
+app/types
+app/recipe_images
 
 db/*.sqlite3
-
-app/recipe_images
