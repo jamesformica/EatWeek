@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151114203330) do
+ActiveRecord::Schema.define(version: 20151130194057) do
 
   create_table "recipes", force: :cascade do |t|
     t.string   "recipe_id"
@@ -21,6 +21,15 @@ ActiveRecord::Schema.define(version: 20151114203330) do
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.integer  "rank"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "img_url"
+    t.string   "google_id_token"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end

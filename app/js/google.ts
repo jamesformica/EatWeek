@@ -1,9 +1,15 @@
 function OnSignIn(googleUser: any): void {
 	
 	var profile = googleUser.getBasicProfile();
-	console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-	console.log('Name: ' + profile.getName());
-	console.log('Image URL: ' + profile.getImageUrl());
-	console.log('Email: ' + profile.getEmail());
-	
+
+	var data = {
+		name: profile.getName(),
+		email: profile.getEmail(),
+		img_url: profile.getImageUrl(),
+		id_token: googleUser.getAuthResponse().id_token
+	};
+
+	eatweek.service.SendRequest<boolean>(eatweek.service.Method.POST, "/adduser", data).done(() => {
+		location.href = '/'
+	});
 }

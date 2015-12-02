@@ -21,7 +21,6 @@ class RecipeHelper
 	end
 
 	def self.add_recipe_from_params(params)
-		# get all the info from params
 		date = Date.parse(params["date"])
 		recipe_id = params["recipe_id"]
 		description = params["description"]

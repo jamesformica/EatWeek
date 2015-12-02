@@ -12,7 +12,7 @@ gem 'rake'
 
 gem 'sinatra-assetpack', '0.3.3', :require => 'sinatra/assetpack'
 
-gem 'sinatra-contrib', '1.4.2'
+gem 'sinatra-contrib', '1.4.6'
 
 gem 'sass', '3.4.13'
 

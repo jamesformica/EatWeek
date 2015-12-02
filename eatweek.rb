@@ -2,7 +2,9 @@ require 'sinatra'
 require 'sinatra/assetpack'
 require 'sinatra/json'
 require 'sinatra/activerecord'
-require "sinatra/reloader"
+require 'sinatra/reloader'
+require 'sinatra/base'
+require 'sinatra/cookies'
 require 'sass'
 require 'slim'
 
@@ -18,12 +20,16 @@ class App < Sinatra::Base
 
 	register Sinatra::AssetPack
 	register Sinatra::ActiveRecordExtension
+	helpers Sinatra::Cookies
 
 	App.helpers ContainerHelper
 
 	set :root, File.dirname(__FILE__)
 	set :public_folder, File.dirname(__FILE__) + '/app/'
 	set :sessions => true
+	set :cookie_options do
+		{ expires: Time.now + 3600*24 }
+	end
 
 	configure :development do
 		register Sinatra::Reloader
@@ -45,8 +51,26 @@ class App < Sinatra::Base
 			'/css/vendor/**/*.css'
 		]
 	end
+
+	before '/' do
+		
+		if @auth_user.nil?
+
+			auth_cookie = cookies[:eatweek_auth]
+
+			if auth_cookie.nil?
+				if request.path_info != '/login'
+					puts "redirecting back to login"
+					redirect to('/login')
+				end
+			else
+				@auth_user = User.find(auth_cookie)
+			end
+		end
+	end
 	
 	get '/' do
+		puts "index"
 		@today = Date.today
 		slim :index
 	end
@@ -89,6 +113,16 @@ class App < Sinatra::Base
 	get '/recipe' do
 		@recipe = Recipe.find(params["id"].to_i)
 		slim :view_recipe, layout: false
+	end
+
+	post '/adduser' do
+		user = UserHelper.add_user_from_params(params)
+		if !user.nil?
+			cookies[:eatweek_auth] = user.id
+			status 200
+		else
+			status 500
+		end
 	end
 
 end
